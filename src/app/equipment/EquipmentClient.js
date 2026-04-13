@@ -21,7 +21,7 @@ export default function EquipmentClient({ equipment }) {
     <>
       <PageHero
         title="Safety Equipment & PPE"
-        description="Premium quality safety equipment and personal protective equipment for your workforce"
+        description="Dedicated gallery / catalog for safety gear and equipment"
         breadcrumbs={[{ label: 'Safety Equipment' }]}
       />
 

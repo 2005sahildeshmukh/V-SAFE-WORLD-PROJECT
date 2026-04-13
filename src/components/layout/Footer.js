@@ -33,8 +33,8 @@ export default function Footer() {
             <Link href="/"><ChevronRight size={14} /> Home</Link>
             <Link href="/about"><ChevronRight size={14} /> About Us</Link>
             <Link href="/trainings"><ChevronRight size={14} /> Trainings</Link>
-            <Link href="/audits"><ChevronRight size={14} /> Audits & Inspections</Link>
-            <Link href="/equipment"><ChevronRight size={14} /> Safety Equipment</Link>
+            <Link href="/audits"><ChevronRight size={14} /> Audits and Inspections</Link>
+            <Link href="/equipment"><ChevronRight size={14} /> Safety Equipment (PPEs)</Link>
             <Link href="/gallery"><ChevronRight size={14} /> Gallery</Link>
             <Link href="/contact"><ChevronRight size={14} /> Contact Us</Link>
           </div>
@@ -47,8 +47,8 @@ export default function Footer() {
             <Link href="/trainings"><ChevronRight size={14} /> EHS Training</Link>
             <Link href="/trainings"><ChevronRight size={14} /> Fire Safety Training</Link>
             <Link href="/trainings"><ChevronRight size={14} /> Industrial Safety</Link>
-            <Link href="/audits"><ChevronRight size={14} /> Safety Audits</Link>
-            <Link href="/equipment"><ChevronRight size={14} /> PPE & Equipment</Link>
+            <Link href="/audits"><ChevronRight size={14} /> Audits and Inspections</Link>
+            <Link href="/equipment"><ChevronRight size={14} /> Safety Equipment (PPEs)</Link>
             <Link href="/consultancy"><ChevronRight size={14} /> Consultancy</Link>
             <Link href="/consultancy"><ChevronRight size={14} /> DMC/CMC Manpower</Link>
           </div>

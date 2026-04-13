@@ -21,7 +21,7 @@ export default function AuditsPage() {
     <>
       <PageHero
         title="Audits & Inspections"
-        description="Thorough safety audits to evaluate compliance, identify risks, and implement corrective actions"
+        description="Revised section (formerly 'Audits') — EHS, Fire Safety, and Industrial audits"
         breadcrumbs={[{ label: 'Audits & Inspections' }]}
       />
 

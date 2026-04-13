@@ -3,81 +3,37 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Shield, Award, Users, CheckCircle, GraduationCap, ClipboardCheck, HardHat, Flame, Briefcase, ChevronRight, Quote, Calendar, ArrowRight, BookOpen, Search, HeartPulse, Image as ImageIcon } from 'lucide-react';
 import styles from './page.module.css';
+import heroBgImage from '@/assets/images/Hero Background.jpeg';
 
-const heroSlides = [
-  {
-    subtitle: 'Your Safety Partner',
-    title: 'One-stop shop for all health and safety training needs',
-    desc: 'Comprehensive EHS training, safety audits, premium equipment, and expert consultancy — delivered with excellence.',
-  },
-  {
-    subtitle: 'Expert Training Programs',
-    title: 'Fire Safety, Industrial Safety & Beyond',
-    desc: 'From first aid to confined space entry, we cover the full spectrum of workplace safety training programs.',
-  },
-  {
-    subtitle: 'Audit & Compliance',
-    title: 'Thorough Safety Audits for Every Industry',
-    desc: 'Our certified auditors help you achieve full EHS compliance with actionable insights and detailed reports.',
-  },
-];
 
-const services = [
-  { icon: <GraduationCap size={30} />, title: 'EHS Training', desc: 'Comprehensive safety training programs covering health, fire, industrial, and disaster management.', href: '/trainings' },
-  { icon: <ClipboardCheck size={30} />, title: 'Audits & Inspections', desc: 'Thorough safety audits to evaluate compliance, identify risks, and implement corrective actions.', href: '/audits' },
-  { icon: <HardHat size={30} />, title: 'Safety Equipment', desc: 'Premium PPE, safety shoes, gloves, and industrial safety equipment for your workforce.', href: '/equipment' },
-  { icon: <Flame size={30} />, title: 'Fire Safety', desc: 'Specialized fire safety training, evacuation drills, and fire fighting equipment solutions.', href: '/trainings' },
-  { icon: <Briefcase size={30} />, title: 'Consultancy', desc: 'Expert safety consultancy and DMC/CMC manpower services for your organization.', href: '/consultancy' },
-  { icon: <Search size={30} />, title: 'Industrial Safety', desc: 'Workplace safety protocols, hazard identification, and compliance training programs.', href: '/trainings' },
-];
+
 
 export default function HomeClient({ testimonials, blogs }) {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <>
       {/* Hero Section */}
       <section className={styles.hero}>
-        {heroSlides.map((slide, i) => (
-          <div key={i} className={`${styles.heroSlide} ${i === currentSlide ? styles.active : ''}`}>
-            <div className={styles.heroOverlay} />
-            <div className={styles.heroBg} />
-          </div>
-        ))}
+        <div className={`${styles.heroSlide} ${styles.active}`}>
+          <div className={styles.heroOverlay} />
+          <div className={styles.heroBg} style={{ backgroundImage: `url("${heroBgImage.src}")` }} />
+        </div>
 
         <div className={styles.heroContent}>
-          <p className={styles.heroSubtitle}>{heroSlides[currentSlide].subtitle}</p>
+          <p className={styles.heroSubtitle}>Your Safety Partner</p>
           <h1 className={styles.heroTitle}>
-            {heroSlides[currentSlide].title.split(' ').map((word, i) =>
+            {'One-stop shop for all health and safety training needs'.split(' ').map((word, i) =>
               ['safety', 'training', 'audits'].includes(word.toLowerCase())
                 ? <span key={i}>{word} </span>
                 : word + ' '
             )}
           </h1>
-          <p className={styles.heroDesc}>{heroSlides[currentSlide].desc}</p>
+          <p className={styles.heroDesc}>Comprehensive EHS training, safety audits, premium equipment, and expert consultancy — delivered with excellence.</p>
           <div className={styles.heroActions}>
-            <Link href="/contact" className="btn btn-accent btn-lg">Book a Consultation</Link>
-            <Link href="/trainings" className="btn btn-white btn-lg">Explore Services</Link>
+            <Link href="/contact" className="btn btn-accent btn-lg">National Safety Week 2024 — Book Now!</Link>
           </div>
         </div>
 
-        <div className={styles.heroIndicators}>
-          {heroSlides.map((_, i) => (
-            <button
-              key={i}
-              className={`${styles.indicator} ${i === currentSlide ? styles.active : ''}`}
-              onClick={() => setCurrentSlide(i)}
-              aria-label={`Slide ${i + 1}`}
-            />
-          ))}
-        </div>
+
 
         <div className={styles.heroBadges}>
           <div className={styles.heroBadgesInner}>
@@ -97,27 +53,7 @@ export default function HomeClient({ testimonials, blogs }) {
         </div>
       </section>
 
-      {/* Trust Bar */}
-      <section className={styles.trustBar}>
-        <div className={styles.trustBarInner}>
-          <div className={styles.trustItem}>
-            <div className={styles.trustIcon}><Award size={24} /></div>
-            <div className={styles.trustLabel}>DISH Approved<small>First Aid Training Institute</small></div>
-          </div>
-          <div className={styles.trustItem}>
-            <div className={styles.trustIcon}><Shield size={24} /></div>
-            <div className={styles.trustLabel}>NSC Member<small>National Safety Council</small></div>
-          </div>
-          <div className={styles.statBadge}>
-            <div className={styles.statNumber}>50+</div>
-            <div className={styles.statLabel}>Trusted<br/>Clients</div>
-          </div>
-          <div className={styles.statBadge}>
-            <div className={styles.statNumber}>200+</div>
-            <div className={styles.statLabel}>Training<br/>Sessions</div>
-          </div>
-        </div>
-      </section>
+
 
       {/* About Preview */}
       <section className={`${styles.aboutPreview} reveal`}>
@@ -146,32 +82,6 @@ export default function HomeClient({ testimonials, blogs }) {
         </div>
       </section>
 
-      {/* Services */}
-      <section className={`${styles.services} reveal`}>
-        <div className="section-title">
-          <h2>Our Services</h2>
-          <p>Comprehensive safety solutions tailored to your industry needs</p>
-        </div>
-        <div className={styles.servicesGrid}>
-          {services.map((service, i) => (
-            <Link href={service.href} key={i} className={`${styles.serviceCard} reveal reveal-delay-${i + 1}`}>
-              <div className={styles.serviceIcon}>{service.icon}</div>
-              <h3>{service.title}</h3>
-              <p>{service.desc}</p>
-              <span className={styles.serviceLink}>Learn More <ChevronRight size={16} /></span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* CTA Banner */}
-      <section className={styles.ctaBanner}>
-        <div className={styles.ctaContent}>
-          <h2>🔥 National Safety Week 2024</h2>
-          <p>Elevate your workplace safety culture. Book customized training programs for your team today!</p>
-          <Link href="/contact" className="btn btn-accent btn-lg">Book Now <ArrowRight size={16} /></Link>
-        </div>
-      </section>
 
       {/* Client Logos */}
       <section className={styles.clientLogos}>

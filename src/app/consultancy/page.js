@@ -13,7 +13,7 @@ export default function ConsultancyPage() {
     <>
       <PageHero
         title="Consultancy Services"
-        description="Expert safety consultancy and manpower services to strengthen your organization's safety culture"
+        description="Specialised safety consultancy and manpower services (DMC/CMC)"
         breadcrumbs={[{ label: 'Consultancy' }]}
       />
 

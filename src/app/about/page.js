@@ -15,7 +15,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About V-Safe World"
-        description="Your trusted partner in comprehensive EHS training and safety solutions"
+        description="Company Mission, Vision, and a leadership profile featuring a director's quote"
         breadcrumbs={[{ label: 'About Us' }]}
       />
 

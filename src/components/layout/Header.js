@@ -2,23 +2,101 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Mail, Phone, Globe, Menu, X, Shield } from 'lucide-react';
+import { Mail, Phone, Globe, Menu, X, Shield, ChevronDown } from 'lucide-react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube, FaXTwitter } from 'react-icons/fa6';
 import styles from './Header.module.css';
+
+const trainingCategories = [
+  {
+    title: 'Health & Wellness',
+    items: [
+      'First Aid, CPR & AED Training',
+      'POSH Awareness',
+      'Women Health & Safety',
+      'Diet & Nutrition',
+      'Home Life Safety',
+      'Work Life Balance',
+      'Mental Health & Stress Management',
+      'Ergonomics & Postures'
+    ]
+  },
+  {
+    title: 'Fire Safety Training',
+    items: [
+      'Fire Extinguisher Training',
+      'Fire Fighting Training',
+      'Evacuation Drills',
+      'Emergency Response Team Training',
+      'Fire Marshal Training'
+    ]
+  },
+  {
+    title: 'Road Safety - Defensive Driving',
+    items: [
+      'Two Wheeler Riders',
+      'Light Motor Vehicle',
+      'Heavy Motor Vehicle',
+      'Ambulance & School Bus',
+      'Forklift/MHE/Crane/Hydra',
+      'Loaders & Tankers',
+      'Hazards Vehicles Drivers',
+      'Simulator Training (2W/4W/HMV)',
+      'Mines Road Safety',
+      'Fleet Audit Management',
+      'Fuel Saving & Efficiency',
+      'Journey Risk Management',
+      'Vehicle Inspection',
+      'Drunk Busters Activity',
+      'Road Show Program'
+    ]
+  },
+  {
+    title: 'Industrial Safety',
+    items: [
+      'Industrial Safety Mela',
+      'Behaviour Based Safety',
+      'Work At Height',
+      'Electrical Safety',
+      'LOTO Training',
+      'Confined Space',
+      'Chemical Safety',
+      'Workplace Safety',
+      'Permit To Work',
+      'HIRA',
+      'Occupational Safety',
+      'Scaffolding Safety',
+      'Construction Safety'
+    ]
+  },
+  {
+    title: 'Disaster Management',
+    items: [
+      'Evacuation Drill',
+      'Disaster Preparedness Training',
+      'Search & Rescue',
+      'Hurricane Safety',
+      'Flood Safety',
+      'Event Safety',
+      'Home Safety',
+      'Rescue From Highrise Building'
+    ]
+  }
+];
 
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
-  { label: 'Trainings', href: '/trainings' },
-  { label: 'Audits', href: '/audits' },
-  { label: 'Equipment', href: '/equipment' },
+  { label: 'Trainings', href: '/trainings', hasMegaMenu: true },
+  { label: 'Audits and Inspections', href: '/audits' },
+  { label: 'Safety Equipment (PPEs)', href: '/equipment' },
   { label: 'Consultancy', href: '/consultancy' },
   { label: 'Gallery', href: '/gallery' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Contact Us', href: '/contact' },
 ];
 
 export default function Header({ settings }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileTrainingsOpen, setMobileTrainingsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
@@ -30,6 +108,7 @@ export default function Header({ settings }) {
 
   useEffect(() => {
     setMobileOpen(false);
+    setMobileTrainingsOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -80,13 +159,36 @@ export default function Header({ settings }) {
 
           <nav className={styles.nav}>
             {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
-              >
-                {item.label}
-              </Link>
+              <div key={item.href} className={styles.navItemWrapper}>
+                <Link
+                  href={item.href}
+                  className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
+                >
+                  {item.label}
+                  {item.hasMegaMenu && <ChevronDown size={14} style={{ marginLeft: 4 }} />}
+                </Link>
+                
+                {item.hasMegaMenu && (
+                  <div className={styles.megaMenu}>
+                    <div className={styles.megaMenuInner}>
+                      {trainingCategories.map((cat, idx) => (
+                        <div key={idx} className={styles.megaColumn}>
+                          <h4>{cat.title}</h4>
+                          <ul>
+                            {cat.items.map((sub, sIdx) => (
+                              <li key={sIdx}>
+                                <Link href={`/trainings#${sub.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}`}>
+                                  {sub}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
 
@@ -113,13 +215,45 @@ export default function Header({ settings }) {
       <div className={`${styles.mobileMenu} ${mobileOpen ? styles.open : ''}`}>
         <nav className={styles.mobileNav}>
           {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`${styles.mobileNavLink} ${pathname === item.href ? styles.active : ''}`}
-            >
-              {item.label}
-            </Link>
+            <div key={item.href} className={styles.mobileNavItemWrapper}>
+              <div className={styles.mobileNavLinkWrapper}>
+                <Link
+                  href={item.href}
+                  className={`${styles.mobileNavLink} ${pathname === item.href ? styles.active : ''}`}
+                >
+                  {item.label}
+                </Link>
+                {item.hasMegaMenu && (
+                  <button 
+                    onClick={() => setMobileTrainingsOpen(!mobileTrainingsOpen)} 
+                    className={styles.mobileToggleBtn}
+                  >
+                    <ChevronDown size={18} className={mobileTrainingsOpen ? styles.rotate : ''} />
+                  </button>
+                )}
+              </div>
+              {item.hasMegaMenu && mobileTrainingsOpen && (
+                <div className={styles.mobileMegaMenu}>
+                  {trainingCategories.map((cat, idx) => (
+                    <div key={idx} className={styles.mobileMegaColumn}>
+                      <h4>{cat.title}</h4>
+                      <ul>
+                        {cat.items.map((sub, sIdx) => (
+                          <li key={sIdx}>
+                            <Link 
+                              href={`/trainings#${sub.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}`}
+                              onClick={() => setMobileOpen(false)}
+                            >
+                              {sub}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </nav>
         <div className={styles.mobileCta}>

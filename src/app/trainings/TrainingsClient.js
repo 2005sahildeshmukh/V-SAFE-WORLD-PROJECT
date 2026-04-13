@@ -9,9 +9,9 @@ const categories = [
   { id: 'all', label: 'All Programs' },
   { id: 'health-wellness', label: 'Health & Wellness' },
   { id: 'fire-safety', label: 'Fire Safety' },
+  { id: 'road-safety', label: 'Road Safety' },
   { id: 'industrial-safety', label: 'Industrial Safety' },
   { id: 'disaster-management', label: 'Disaster Management' },
-  { id: 'other', label: 'Other Modules' },
 ];
 
 const iconMap = {
@@ -25,9 +25,9 @@ const iconMap = {
 const categoryLabels = {
   'health-wellness': 'Health & Wellness',
   'fire-safety': 'Fire Safety',
+  'road-safety': 'Road Safety',
   'industrial-safety': 'Industrial Safety',
   'disaster-management': 'Disaster Management',
-  'other': 'Other Modules',
 };
 
 export default function TrainingsClient({ trainings }) {
@@ -39,7 +39,7 @@ export default function TrainingsClient({ trainings }) {
     <>
       <PageHero
         title="Our Training Programs"
-        description="Comprehensive safety training programs designed to build a culture of safety across your organization"
+        description="Categorised listing of all safety courses offered"
         breadcrumbs={[{ label: 'Trainings' }]}
       />
 
