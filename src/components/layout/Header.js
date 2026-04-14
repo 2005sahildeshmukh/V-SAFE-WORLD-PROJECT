@@ -167,7 +167,7 @@ export default function Header({ settings }) {
                   {item.label}
                   {item.hasMegaMenu && <ChevronDown size={14} style={{ marginLeft: 4 }} />}
                 </Link>
-                
+
                 {item.hasMegaMenu && (
                   <div className={styles.megaMenu}>
                     <div className={styles.megaMenuInner}>
@@ -224,8 +224,8 @@ export default function Header({ settings }) {
                   {item.label}
                 </Link>
                 {item.hasMegaMenu && (
-                  <button 
-                    onClick={() => setMobileTrainingsOpen(!mobileTrainingsOpen)} 
+                  <button
+                    onClick={() => setMobileTrainingsOpen(!mobileTrainingsOpen)}
                     className={styles.mobileToggleBtn}
                   >
                     <ChevronDown size={18} className={mobileTrainingsOpen ? styles.rotate : ''} />
@@ -240,7 +240,7 @@ export default function Header({ settings }) {
                       <ul>
                         {cat.items.map((sub, sIdx) => (
                           <li key={sIdx}>
-                            <Link 
+                            <Link
                               href={`/trainings#${sub.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}`}
                               onClick={() => setMobileOpen(false)}
                             >

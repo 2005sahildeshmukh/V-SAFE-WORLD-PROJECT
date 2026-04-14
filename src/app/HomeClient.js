@@ -1,11 +1,18 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Shield, Award, Users, CheckCircle, GraduationCap, ClipboardCheck, HardHat, Flame, Briefcase, ChevronRight, Quote, Calendar, ArrowRight, BookOpen, Search, HeartPulse, Image as ImageIcon } from 'lucide-react';
+import { Shield, Award, Users, CheckCircle, ChevronRight, Quote, Calendar, ArrowRight } from 'lucide-react';
 import styles from './page.module.css';
 import heroBgImage from '@/assets/images/Hero Background.jpeg';
-
-
+import healthWellnessImg from '@/assets/images/health and well-being.webp';
+import auditsImg from '@/assets/images/audits and inspection.webp';
+import defensiveDrivingImg from '@/assets/images/defensive-driving.webp';
+import industrialSafetyImg from '@/assets/images/industrial safety.webp';
+import fireSafetyImg from '@/assets/images/fire safety.webp';
+import contentDevelopmentImg from '@/assets/images/content-development.webp';
+import ehsTrainingBlogImg from '@/assets/images/ehs_training_blog.png';
+import fireSafetyBlogImg from '@/assets/images/fire_safety_blog.png';
+import safetyWeekBlogImg from '@/assets/images/safety_week_blog.png';
 
 
 export default function HomeClient({ testimonials, blogs }) {
@@ -43,7 +50,7 @@ export default function HomeClient({ testimonials, blogs }) {
             </div>
             <div className={styles.badge}>
               <div className={styles.badgeIcon}><Shield size={18} /></div>
-              <span className={styles.badgeText}>National Safety<br/>Council Member</span>
+              <span className={styles.badgeText}>National Safety<br />Council Member</span>
             </div>
             <div className={styles.badge}>
               <div className={styles.badgeIcon}><Users size={18} /></div>
@@ -59,16 +66,17 @@ export default function HomeClient({ testimonials, blogs }) {
       <section className={`${styles.aboutPreview} reveal`}>
         <div className={styles.aboutGrid}>
           <div className={styles.aboutImage}>
-            <div className={styles.aboutImagePlaceholder}>
-              <ImageIcon size={48} />
-              <span>Company Image</span>
-            </div>
+            <img
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
+              alt="V-Safe World safety professionals in the field"
+              className={styles.aboutImg}
+            />
           </div>
           <div className={styles.aboutText}>
             <h2>About <span>V-Safe World</span></h2>
             <p>
-              V-Safe World Pvt Ltd is a leading provider of comprehensive Environment, Health, and Safety (EHS) solutions. 
-              We specialize in delivering world-class safety training programs, conducting thorough audits and inspections, 
+              V-Safe World Pvt Ltd is a leading provider of comprehensive Environment, Health, and Safety (EHS) solutions.
+              We specialize in delivering world-class safety training programs, conducting thorough audits and inspections,
               supplying premium safety equipment, and providing expert consultancy services.
             </p>
             <div className={styles.aboutFeatures}>
@@ -78,6 +86,75 @@ export default function HomeClient({ testimonials, blogs }) {
               <div className={styles.aboutFeature}><CheckCircle size={18} /> Pan India Presence</div>
             </div>
             <Link href="/about" className="btn btn-primary">Learn More About Us <ArrowRight size={16} /></Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Trainings Section */}
+      <section className={`${styles.trainingsSection} reveal`}>
+        <div className={styles.trainingsTop}>
+          <div className={styles.trainingsText}>
+            <h2 className={styles.trainingsHeading}>SAFER WORKPLACE</h2>
+            <h3 className={styles.trainingsSubheading}>Keeping People safe, injury-free,<br />and productive.</h3>
+            <p className={styles.trainingsDesc}>
+              V-Safe World is a one-stop shop for all health, safety, and disaster management-related products, services, and solutions. Providing solutions globally for the last 20 years that match the pace of this era that is innovative, cutting-edge, and reliable, we are enveloping the complete suite of Health and Safety training and products for all domains to prevent accidents, incidents, or injuries. Protecting you, your loved ones, and your assets are the prime drivers of our business.
+            </p>
+            <Link href="/contact" className={styles.enquireBtn}>
+              Enquire Now
+            </Link>
+          </div>
+          <div className={styles.trainingsCardsTop}>
+            <div className={styles.trainingCard} style={{ backgroundImage: `url("${healthWellnessImg.src}")` }}>
+              <div className={styles.trainingOverlay}>
+                <h3>HEALTH &amp; WELLNESS</h3>
+                <Link href="/trainings" className={styles.trainingReadMore}>
+                  READ MORE <ChevronRight size={14} />
+                </Link>
+              </div>
+            </div>
+            <div className={styles.trainingCard} style={{ backgroundImage: `url("${auditsImg.src}")` }}>
+              <div className={styles.trainingOverlay}>
+                <h3>AUDITS &amp; INSPECTION</h3>
+                <Link href="/audits" className={styles.trainingReadMore}>
+                  READ MORE <ChevronRight size={14} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.trainingsCardsBottom}>
+          <div className={styles.trainingCard} style={{ backgroundImage: `url("${defensiveDrivingImg.src}")` }}>
+            <div className={styles.trainingOverlay}>
+              <h3>DEFENSIVE DRIVING</h3>
+              <Link href="/trainings" className={styles.trainingReadMore}>
+                READ MORE <ChevronRight size={14} />
+              </Link>
+            </div>
+          </div>
+          <div className={styles.trainingCard} style={{ backgroundImage: `url("${industrialSafetyImg.src}")` }}>
+            <div className={styles.trainingOverlay}>
+              <h3>INDUSTRIAL SAFETY</h3>
+              <Link href="/trainings" className={styles.trainingReadMore}>
+                READ MORE <ChevronRight size={14} />
+              </Link>
+            </div>
+          </div>
+          <div className={styles.trainingCard} style={{ backgroundImage: `url("${fireSafetyImg.src}")` }}>
+            <div className={styles.trainingOverlay}>
+              <h3>FIRE SAFETY</h3>
+              <Link href="/trainings" className={styles.trainingReadMore}>
+                READ MORE <ChevronRight size={14} />
+              </Link>
+            </div>
+          </div>
+          <div className={styles.trainingCard} style={{ backgroundImage: `url("${contentDevelopmentImg.src}")` }}>
+            <div className={styles.trainingOverlay}>
+              <h3>CONTENT DEVELOPMENT</h3>
+              <Link href="/trainings" className={styles.trainingReadMore}>
+                READ MORE <ChevronRight size={14} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -125,9 +202,17 @@ export default function HomeClient({ testimonials, blogs }) {
           <p>Stay updated with the latest in workplace safety</p>
         </div>
         <div className={styles.blogGrid}>
-          {blogs.map((blog) => (
+          {blogs.map((blog, index) => {
+            const blogImages = [
+              ehsTrainingBlogImg.src,
+              fireSafetyBlogImg.src,
+              safetyWeekBlogImg.src,
+            ];
+            return (
             <div key={blog.id} className={styles.blogCard}>
-              <div className={styles.blogThumb}><BookOpen size={32} /></div>
+              <div className={styles.blogThumb}>
+                <img src={blogImages[index % blogImages.length]} alt={blog.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
               <div className={styles.blogBody}>
                 <div className={styles.blogDate}><Calendar size={12} /> {blog.publishDate}</div>
                 <h3>{blog.title}</h3>
@@ -135,7 +220,8 @@ export default function HomeClient({ testimonials, blogs }) {
                 <span className={styles.blogReadMore}>Read More <ArrowRight size={14} /></span>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 

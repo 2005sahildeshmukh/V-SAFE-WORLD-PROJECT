@@ -282,6 +282,19 @@
   opacity: 0.5;
 }
 
+.aboutImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.aboutImage:hover .aboutImg {
+  transform: scale(1.04);
+}
+
 .aboutText h2 {
   margin-bottom: var(--space-md);
 }
@@ -409,6 +422,162 @@
 
 .serviceCard:hover .serviceLink {
   gap: 8px;
+}
+
+/* Trainings Section */
+.trainingsSection {
+  padding: var(--space-4xl) 0;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-4xl) var(--space-xl);
+}
+
+.trainingsTop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.trainingsText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.trainingsHeading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.trainingsHeading::before {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: var(--color-primary);
+}
+
+.trainingsSubheading {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  line-height: 1.2;
+  margin-bottom: var(--space-lg);
+}
+
+.trainingsDesc {
+  color: var(--color-gray-700);
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+  font-size: 0.95rem;
+}
+
+.enquireBtn {
+  border: 1px solid var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+  padding: 12px 28px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.enquireBtn:hover {
+  background: var(--color-primary-light);
+}
+
+.trainingsCardsTop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.trainingsCardsBottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+.trainingCard {
+  position: relative;
+  border-radius: 200px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-gray-200);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  min-height: 380px;
+}
+
+.trainingsCardsTop .trainingCard {
+  min-height: 480px;
+  height: 100%;
+}
+
+.trainingsCardsBottom .trainingCard {
+  min-height: 350px;
+}
+
+.trainingCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.trainingOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-2xl) var(--space-xl) 50px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.trainingOverlay h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.trainingReadMore {
+  background: #000000;
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-base);
+  border: none;
+  text-decoration: none;
+}
+
+.trainingCard:hover .trainingReadMore {
+  background: var(--color-primary);
+  color: var(--color-white);
 }
 
 /* CTA Banner */
@@ -562,12 +731,8 @@
 
 .blogThumb {
   height: 200px;
-  background: linear-gradient(135deg, var(--color-primary-light), var(--color-gray-100));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-primary);
-  opacity: 0.5;
+  overflow: hidden;
+  background: var(--color-gray-100);
 }
 
 .blogBody {
