@@ -1200,6 +1200,7 @@
   .trainingsHeading { font-size: 2.4rem; }
   .trainingsGrid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 240px; }
   .trainingCardLarge { grid-row: span 2; }
+  .trainingCardWide { grid-column: span 2; }
   .tttTitle { font-size: 2.4rem; }
   .tttHeading { font-size: 1.2rem; }
   .tttStats { gap: var(--space-2xl); }
@@ -1224,6 +1225,7 @@
   .statNumber { font-size: 1.8rem; }
   .trainingsGrid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
   .trainingCardLarge { grid-row: span 1; }
+  .trainingCardWide { grid-column: span 1; }
   .trainingsHeading { font-size: 2rem; }
   .trainTheTrainer { min-height: auto; }
   .tttInner { padding: var(--space-3xl) var(--space-xl); }
