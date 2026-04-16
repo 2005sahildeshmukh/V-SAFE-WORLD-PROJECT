@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out -t"
+    "deploy": "cmd /c type nul > out\\.nojekyll && gh-pages -d out -t"
   },
   "dependencies": {
     "lucide-react": "^1.8.0",
