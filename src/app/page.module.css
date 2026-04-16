@@ -34,14 +34,14 @@
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
-  transform: scale(1.05);
-  animation: heroZoom 15s ease infinite alternate;
+  background-position: center top;
+  transform: scale(1);
+  animation: heroZoom 20s ease infinite alternate;
 }
 
 @keyframes heroZoom {
-  0% { transform: scale(1.05); }
-  100% { transform: scale(1.15); }
+  0% { transform: scale(1); }
+  100% { transform: scale(1.03); }
 }
 
 .heroContent {
@@ -427,7 +427,7 @@
 /* Trainings Section */
 .trainingsSection {
   padding: var(--space-4xl) var(--space-xl);
-  max-width: var(--max-width);
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -560,6 +560,10 @@
 
 .trainingCardLarge {
   grid-row: span 2;
+}
+
+.trainingCardWide {
+  grid-column: span 3;
 }
 
 .trainingCard::before {

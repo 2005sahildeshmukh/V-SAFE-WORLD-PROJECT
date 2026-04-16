@@ -3,19 +3,21 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Shield, Award, Users, CheckCircle, ChevronRight, Quote, Calendar, ArrowRight, GraduationCap } from 'lucide-react';
 import styles from './page.module.css';
-import heroBgImage from '@/assets/images/Hero Background.jpeg';
+import heroBgImage from '@/assets/images/Background.jpg';
 import healthWellnessImg from '@/assets/images/health and well-being.webp';
 import auditsImg from '@/assets/images/audits and inspection.webp';
 import defensiveDrivingImg from '@/assets/images/defensive-driving.webp';
 import industrialSafetyImg from '@/assets/images/industrial safety.webp';
 import fireSafetyImg from '@/assets/images/fire safety.webp';
 import contentDevelopmentImg from '@/assets/images/content-development.webp';
-import ehsTrainingBlogImg from '@/assets/images/ehs_training_blog.png';
-import fireSafetyBlogImg from '@/assets/images/fire_safety_blog.png';
-import safetyWeekBlogImg from '@/assets/images/safety_week_blog.png';
+import adaniLogo from '@/assets/images/Adani.webp';
+import adityaBirlaLogo from '@/assets/images/Aditya birla logo.webp';
+import cocaColaLogo from '@/assets/images/Coca-Cola_logo.svg.webp';
+import ltLogo from '@/assets/images/L&T.webp';
+import ppeImg from '@/assets/images/ppe.jpg';
 
 
-export default function HomeClient({ testimonials, blogs }) {
+export default function HomeClient({ testimonials }) {
   return (
     <>
       {/* Hero Section */}
@@ -152,7 +154,7 @@ export default function HomeClient({ testimonials, blogs }) {
               </div>
             </div>
           </Link>
-          <Link href="/equipment" className={`${styles.trainingCard} ${styles.trainingCardLarge}`} style={{ backgroundImage: `url("https://images.unsplash.com/photo-1544485547-759b66236df7?auto=format&fit=crop&q=80&w=800&h=500")` }}>
+          <Link href="/equipment" className={`${styles.trainingCard} ${styles.trainingCardWide}`} style={{ backgroundImage: `url("${ppeImg.src}")` }}>
             <div className={styles.trainingOverlay}>
               <span className={styles.trainingNum}>06</span>
               <div className={styles.trainingInfo}>
@@ -228,34 +230,30 @@ export default function HomeClient({ testimonials, blogs }) {
         </div>
         <div className={styles.logosTrack}>
           {[
-            { name: 'Tata Steel', logo: 'https://logo.clearbit.com/tatasteel.com' },
-            { name: 'Reliance', logo: 'https://logo.clearbit.com/ril.com' },
-            { name: 'Adani', logo: 'https://logo.clearbit.com/adani.com' },
-            { name: 'Larsen & Toubro', logo: 'https://logo.clearbit.com/larsentoubro.com' },
-            { name: 'Mahindra', logo: 'https://logo.clearbit.com/mahindra.com' },
-            { name: 'Godrej', logo: 'https://logo.clearbit.com/godrej.com' },
-            { name: 'Coca-Cola', logo: '/clients/cocacola.svg' },
-            { name: 'ITC', logo: '/clients/itc.svg' },
-            { name: 'Wipro', logo: 'https://logo.clearbit.com/wipro.com' },
-            { name: 'Bajaj', logo: 'https://logo.clearbit.com/bajaj.com' },
-            { name: 'Tata Steel', logo: 'https://logo.clearbit.com/tatasteel.com' },
-            { name: 'Reliance', logo: 'https://logo.clearbit.com/ril.com' },
-            { name: 'Adani', logo: 'https://logo.clearbit.com/adani.com' },
-            { name: 'Larsen & Toubro', logo: 'https://logo.clearbit.com/larsentoubro.com' },
-            { name: 'Mahindra', logo: 'https://logo.clearbit.com/mahindra.com' },
-            { name: 'Godrej', logo: 'https://logo.clearbit.com/godrej.com' },
-            { name: 'Coca-Cola', logo: '/clients/cocacola.svg' },
-            { name: 'ITC', logo: '/clients/itc.svg' },
-            { name: 'Wipro', logo: 'https://logo.clearbit.com/wipro.com' },
-            { name: 'Bajaj', logo: 'https://logo.clearbit.com/bajaj.com' },
+            { name: 'Adani', logo: adaniLogo.src },
+            { name: 'Aditya Birla', logo: adityaBirlaLogo.src },
+            { name: 'Coca-Cola', logo: cocaColaLogo.src },
+            { name: 'Larsen & Toubro', logo: ltLogo.src },
+            { name: 'Adani', logo: adaniLogo.src },
+            { name: 'Aditya Birla', logo: adityaBirlaLogo.src },
+            { name: 'Coca-Cola', logo: cocaColaLogo.src },
+            { name: 'Larsen & Toubro', logo: ltLogo.src },
+            { name: 'Adani', logo: adaniLogo.src },
+            { name: 'Aditya Birla', logo: adityaBirlaLogo.src },
+            { name: 'Coca-Cola', logo: cocaColaLogo.src },
+            { name: 'Larsen & Toubro', logo: ltLogo.src },
+            { name: 'Adani', logo: adaniLogo.src },
+            { name: 'Aditya Birla', logo: adityaBirlaLogo.src },
+            { name: 'Coca-Cola', logo: cocaColaLogo.src },
+            { name: 'Larsen & Toubro', logo: ltLogo.src },
           ].map((client, i) => (
             <div key={i} className={styles.logoItem}>
               <img
                 src={client.logo}
                 alt={client.name}
-                style={{ maxWidth: '100px', maxHeight: '45px', objectFit: 'contain', filter: 'grayscale(100%) opacity(0.7)', transition: 'filter 0.3s ease' }}
-                onMouseOver={(e) => e.currentTarget.style.filter = 'grayscale(0%) opacity(1)'}
-                onMouseOut={(e) => e.currentTarget.style.filter = 'grayscale(100%) opacity(0.7)'}
+                style={{ maxWidth: '100px', maxHeight: '45px', objectFit: 'contain', transition: 'transform 0.3s ease' }}
+                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
                 onError={(e) => { e.currentTarget.style.display = 'none'; }}
               />
             </div>
