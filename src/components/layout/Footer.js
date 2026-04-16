@@ -10,7 +10,6 @@ export default function Footer() {
         {/* Brand Column */}
         <div className={styles.footerBrand}>
           <div className={styles.footerLogo}>
-            <div className={styles.footerLogoIcon}><Shield size={22} /></div>
             <span className={styles.footerLogoText}>V-Safe World</span>
           </div>
           <p>
@@ -49,8 +48,6 @@ export default function Footer() {
             <Link href="/trainings"><ChevronRight size={14} /> Industrial Safety</Link>
             <Link href="/audits"><ChevronRight size={14} /> Audits and Inspections</Link>
             <Link href="/equipment"><ChevronRight size={14} /> Safety Equipment (PPEs)</Link>
-            <Link href="/consultancy"><ChevronRight size={14} /> Consultancy</Link>
-            <Link href="/consultancy"><ChevronRight size={14} /> DMC/CMC Manpower</Link>
           </div>
         </div>
 
@@ -58,7 +55,7 @@ export default function Footer() {
         <div className={styles.footerColumn}>
           <h4>Contact Us</h4>
           <div className={styles.contactItem}>
-            <Phone /> <span>+91-XXXXXXXXXX</span>
+            <Phone /> <span>+91 XXXXXXXXXX</span>
           </div>
           <div className={styles.contactItem}>
             <Mail /> <span>info@vsafeworld.com</span>

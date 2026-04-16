@@ -97,6 +97,7 @@
   margin: 0 auto;
   padding: 0 var(--space-xl);
   height: var(--header-height);
+  gap: 2rem;
 }
 
 .logo {
@@ -130,6 +131,7 @@
   font-size: 1.35rem;
   color: var(--color-primary);
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .logoSub {
@@ -138,6 +140,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 /* Desktop Navigation */
@@ -148,13 +151,16 @@
 }
 
 .navLink {
-  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--color-gray-700);
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
   position: relative;
+  white-space: nowrap;
 }
 
 .navLink:hover,

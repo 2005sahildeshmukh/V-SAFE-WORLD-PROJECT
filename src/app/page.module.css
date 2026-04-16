@@ -426,10 +426,9 @@
 
 /* Trainings Section */
 .trainingsSection {
-  padding: var(--space-4xl) 0;
+  padding: var(--space-4xl) var(--space-xl);
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: var(--space-4xl) var(--space-xl);
 }
 
 .trainingsTop {
@@ -458,20 +457,17 @@
   gap: var(--space-sm);
 }
 
-.trainingsHeading::before {
-  content: '';
-  width: 40px;
-  height: 2px;
-  background: var(--color-primary);
-}
-
 .trainingsSubheading {
   font-family: var(--font-heading);
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: var(--color-primary-dark);
+  font-size: 2.4rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1.2;
   margin-bottom: var(--space-lg);
+  letter-spacing: -0.02em;
 }
 
 .trainingsDesc {
@@ -482,19 +478,42 @@
 }
 
 .enquireBtn {
-  border: 1px solid var(--color-primary);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color-primary);
   background: transparent;
   color: var(--color-primary);
-  padding: 12px 28px;
+  padding: 12px 32px;
   border-radius: var(--radius-full);
-  font-weight: 600;
-  transition: all var(--transition-base);
+  font-weight: 700;
+  transition: all 0.4s ease;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1;
+}
+
+.enquireBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -1;
 }
 
 .enquireBtn:hover {
-  background: var(--color-primary-light);
+  color: var(--color-white);
+}
+
+.enquireBtn:hover::before {
+  transform: scaleX(1);
 }
 
 .trainingsCardsTop {
@@ -515,9 +534,10 @@
   overflow: hidden;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   background-color: var(--color-gray-200);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   min-height: 380px;
 }
 
@@ -531,8 +551,8 @@
 }
 
 .trainingCard:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.14);
 }
 
 .trainingOverlay {
@@ -540,44 +560,72 @@
   bottom: 0;
   left: 0;
   right: 0;
+  height: 100%;
   padding: var(--space-2xl) var(--space-xl) 50px;
-  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   text-align: center;
   color: var(--color-white);
+  transition: all 0.4s ease;
 }
 
 .trainingOverlay h3 {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 900;
   text-transform: uppercase;
-  margin-bottom: var(--space-md);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  margin-bottom: 0;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
   letter-spacing: 0.5px;
   color: #ffffff;
+  transform: translateY(18px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.trainingCard:hover .trainingOverlay h3 {
+  transform: translateY(0);
 }
 
 .trainingReadMore {
-  background: #000000;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: #ffffff;
-  padding: 10px 24px;
+  padding: 9px 22px;
   border-radius: 30px;
   font-size: 0.8rem;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: all var(--transition-base);
-  border: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
+  opacity: 0;
+  transform: translateY(18px);
+  margin-top: 14px;
 }
 
 .trainingCard:hover .trainingReadMore {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.trainingReadMore:hover {
   background: var(--color-primary);
-  color: var(--color-white);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.trainingReadMore svg {
+  transition: transform 0.3s ease;
+}
+
+.trainingReadMore:hover svg {
+  transform: translateX(4px);
 }
 
 /* CTA Banner */

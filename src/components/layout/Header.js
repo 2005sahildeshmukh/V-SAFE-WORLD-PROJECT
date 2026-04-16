@@ -89,7 +89,6 @@ const navItems = [
   { label: 'Trainings', href: '/trainings', hasMegaMenu: true },
   { label: 'Audits and Inspections', href: '/audits' },
   { label: 'Safety Equipment (PPEs)', href: '/equipment' },
-  { label: 'Consultancy', href: '/consultancy' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Contact Us', href: '/contact' },
 ];
@@ -126,19 +125,15 @@ export default function Header({ settings }) {
               <Mail /> {settings?.email || 'info@vsafeworld.com'}
             </span>
             <span className={styles.utilityItem}>
-              <Phone /> {settings?.phone || '+91-XXXXXXXXXX'}
+              <Phone /> {settings?.phone || '+91 XXXXXXXXXX'}
             </span>
           </div>
           <div className={styles.utilityRight}>
-            <span className={styles.globeTag}>
-              <Globe /> Services Across the Globe
-            </span>
             <div className={styles.socialLinks}>
-              {settings?.socialLinks?.facebook && <a href={settings.socialLinks.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>}
-              {settings?.socialLinks?.instagram && <a href={settings.socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>}
-              {settings?.socialLinks?.linkedin && <a href={settings.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>}
-              {settings?.socialLinks?.youtube && <a href={settings.socialLinks.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>}
-              {settings?.socialLinks?.twitter && <a href={settings.socialLinks.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaXTwitter /></a>}
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
             </div>
           </div>
         </div>
@@ -148,9 +143,6 @@ export default function Header({ settings }) {
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
         <div className={styles.headerInner}>
           <Link href="/" className={styles.logo}>
-            <div className={styles.logoIcon}>
-              <Shield size={24} />
-            </div>
             <div className={styles.logoText}>
               <span className={styles.logoName}>V-Safe World</span>
               <span className={styles.logoSub}>Pvt Ltd</span>
@@ -192,11 +184,7 @@ export default function Header({ settings }) {
             ))}
           </nav>
 
-          <div className={styles.navCta}>
-            <Link href="/contact" className="btn btn-primary btn-sm">
-              Get a Quote
-            </Link>
-          </div>
+          {/* CTA removed */}
 
           <button
             className={`${styles.hamburger} ${mobileOpen ? styles.open : ''}`}
@@ -256,11 +244,7 @@ export default function Header({ settings }) {
             </div>
           ))}
         </nav>
-        <div className={styles.mobileCta}>
-          <Link href="/contact" className="btn btn-primary" style={{ width: '100%' }}>
-            Get a Quote
-          </Link>
-        </div>
+        {/* Mobile CTA removed */}
       </div>
     </>
   );

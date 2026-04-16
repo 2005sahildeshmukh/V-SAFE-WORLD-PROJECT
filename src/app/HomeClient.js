@@ -26,15 +26,9 @@ export default function HomeClient({ testimonials, blogs }) {
         </div>
 
         <div className={styles.heroContent}>
-          <p className={styles.heroSubtitle}>Your Safety Partner</p>
           <h1 className={styles.heroTitle}>
-            {'One-stop shop for all health and safety training needs'.split(' ').map((word, i) =>
-              ['safety', 'training', 'audits'].includes(word.toLowerCase())
-                ? <span key={i}>{word} </span>
-                : word + ' '
-            )}
+            &ldquo;One-stop shop for all health and safety training needs&rdquo;
           </h1>
-          <p className={styles.heroDesc}>Comprehensive EHS training, safety audits, premium equipment, and expert consultancy — delivered with excellence.</p>
           <div className={styles.heroActions}>
             <Link href="/contact" className="btn btn-accent btn-lg">National Safety Week 2024 — Book Now!</Link>
           </div>
@@ -112,10 +106,10 @@ export default function HomeClient({ testimonials, blogs }) {
                 </Link>
               </div>
             </div>
-            <div className={styles.trainingCard} style={{ backgroundImage: `url("${auditsImg.src}")` }}>
+            <div className={styles.trainingCard} style={{ backgroundImage: `url("${industrialSafetyImg.src}")` }}>
               <div className={styles.trainingOverlay}>
-                <h3>AUDITS &amp; INSPECTION</h3>
-                <Link href="/audits" className={styles.trainingReadMore}>
+                <h3>INDUSTRIAL SAFETY</h3>
+                <Link href="/trainings" className={styles.trainingReadMore}>
                   READ MORE <ChevronRight size={14} />
                 </Link>
               </div>
@@ -132,14 +126,6 @@ export default function HomeClient({ testimonials, blogs }) {
               </Link>
             </div>
           </div>
-          <div className={styles.trainingCard} style={{ backgroundImage: `url("${industrialSafetyImg.src}")` }}>
-            <div className={styles.trainingOverlay}>
-              <h3>INDUSTRIAL SAFETY</h3>
-              <Link href="/trainings" className={styles.trainingReadMore}>
-                READ MORE <ChevronRight size={14} />
-              </Link>
-            </div>
-          </div>
           <div className={styles.trainingCard} style={{ backgroundImage: `url("${fireSafetyImg.src}")` }}>
             <div className={styles.trainingOverlay}>
               <h3>FIRE SAFETY</h3>
@@ -148,10 +134,18 @@ export default function HomeClient({ testimonials, blogs }) {
               </Link>
             </div>
           </div>
-          <div className={styles.trainingCard} style={{ backgroundImage: `url("${contentDevelopmentImg.src}")` }}>
+          <div className={styles.trainingCard} style={{ backgroundImage: `url("${auditsImg.src}")` }}>
             <div className={styles.trainingOverlay}>
-              <h3>CONTENT DEVELOPMENT</h3>
-              <Link href="/trainings" className={styles.trainingReadMore}>
+              <h3>AUDITS &amp; INSPECTION</h3>
+              <Link href="/audits" className={styles.trainingReadMore}>
+                READ MORE <ChevronRight size={14} />
+              </Link>
+            </div>
+          </div>
+          <div className={styles.trainingCard} style={{ backgroundImage: `url("https://images.unsplash.com/photo-1544485547-759b66236df7?auto=format&fit=crop&q=80&w=600&h=400")` }}>
+            <div className={styles.trainingOverlay}>
+              <h3>PPE</h3>
+              <Link href="/equipment" className={styles.trainingReadMore}>
                 READ MORE <ChevronRight size={14} />
               </Link>
             </div>
@@ -167,7 +161,9 @@ export default function HomeClient({ testimonials, blogs }) {
         </div>
         <div className={styles.logosTrack}>
           {[...Array(12)].map((_, i) => (
-            <div key={i} className={styles.logoItem}>Client {(i % 6) + 1}</div>
+            <div key={i} className={styles.logoItem}>
+              <img src={`https://placehold.co/150x60/f8f9fa/a0aec0?text=Logo+${(i % 6) + 1}`} alt={`Client ${(i % 6) + 1}`} style={{ borderRadius: '8px' }} />
+            </div>
           ))}
         </div>
       </section>
@@ -195,36 +191,7 @@ export default function HomeClient({ testimonials, blogs }) {
         </div>
       </section>
 
-      {/* Blog Preview */}
-      <section className={`${styles.blogPreview} reveal`}>
-        <div className="section-title">
-          <h2>Latest Articles</h2>
-          <p>Stay updated with the latest in workplace safety</p>
-        </div>
-        <div className={styles.blogGrid}>
-          {blogs.map((blog, index) => {
-            const blogImages = [
-              ehsTrainingBlogImg.src,
-              fireSafetyBlogImg.src,
-              safetyWeekBlogImg.src,
-            ];
-            return (
-            <div key={blog.id} className={styles.blogCard}>
-              <div className={styles.blogThumb}>
-                <img src={blogImages[index % blogImages.length]} alt={blog.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              </div>
-              <div className={styles.blogBody}>
-                <div className={styles.blogDate}><Calendar size={12} /> {blog.publishDate}</div>
-                <h3>{blog.title}</h3>
-                <p>{blog.excerpt}</p>
-                <span className={styles.blogReadMore}>Read More <ArrowRight size={14} /></span>
-              </div>
-            </div>
-            );
-          })}
-        </div>
-      </section>
-
+      {/* Blog section removed as requested */}
       {/* Enquiry + Map */}
       <section className={`${styles.enquiry} reveal`}>
         <div className="section-title">
