@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import PageHero from '@/components/sections/PageHero';
 import { HeartPulse, Flame, HardHat, AlertTriangle, BookOpen, ChevronRight, ArrowRight, Apple, Heart, Monitor, LogOut, ShieldAlert, Car, ShieldCheck, Siren, GraduationCap, ArrowUp, Lock, Box, Brain } from 'lucide-react';
@@ -30,8 +31,23 @@ const categoryLabels = {
   'disaster-management': 'Disaster Management',
 };
 
-export default function TrainingsClient({ trainings }) {
-  const [activeTab, setActiveTab] = useState('all');
+function TrainingsContent({ trainings }) {
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get('category');
+  
+  // Initialize state based on URL if present
+  const [activeTab, setActiveTab] = useState(() => {
+    if (categoryParam && categories.some(cat => cat.id === categoryParam)) {
+      return categoryParam;
+    }
+    return 'all';
+  });
+
+  useEffect(() => {
+    if (categoryParam && categories.some(cat => cat.id === categoryParam)) {
+      setActiveTab(categoryParam);
+    }
+  }, [categoryParam]);
 
   const filtered = activeTab === 'all' ? trainings : trainings.filter((t) => t.category === activeTab);
 
@@ -76,5 +92,13 @@ export default function TrainingsClient({ trainings }) {
         </div>
       </section>
     </>
+  );
+}
+
+export default function TrainingsClient({ trainings }) {
+  return (
+    <Suspense fallback={<div>Loading trainings...</div>}>
+      <TrainingsContent trainings={trainings} />
+    </Suspense>
   );
 }

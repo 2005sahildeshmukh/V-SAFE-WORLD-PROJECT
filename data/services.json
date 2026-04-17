@@ -1,0 +1,134 @@
+{
+  "health-wellness": {
+    "title": "Health & Wellness",
+    "slug": "health-wellness",
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop",
+    "description": "Mount Safety's health and wellness services focus on the active pursuit of a healthy lifestyle to enhance overall physical, mental, and social well-being. These programs are designed to integrate safety into daily life through live demonstrations and interactive learning.",
+    "fullContent": "Our comprehensive Health & Wellness programs are designed to transition safety from a workplace requirement to a lifestyle choice. By focusing on both preventive and reactive measures, we help organizations build a resilient workforce. From basic life support to mental health and ergonomics, we cover every aspect of employee well-being.",
+    "icon": "heart-pulse",
+    "programs": [
+      { "title": "First Responders Course", "desc": "Essential emergency first aid training for immediate workplace response." },
+      { "title": "Diet & Nutrition Counseling", "desc": "Science-based guidance for balanced nutrition and energy levels." },
+      { "title": "Ergonomics & Stress Management", "desc": "Optimizing workstation setup and mental resilience techniques." },
+      { "title": "Yoga & Meditation", "desc": "Holistic sessions to reduce workplace fatigue and improve focus." },
+      { "title": "Women's Health & Safety", "desc": "Specialized programs addressing unique physiological and safety needs." }
+    ],
+    "benefits": [
+      "Reduced workplace absenteeism",
+      "Enhanced employee morale and productivity",
+      "Immediate emergency response capabilities",
+      "Long-term wellness culture"
+    ],
+    "standards": "Global Medical Emergency Responder Standards & WHO Health Guidelines"
+  },
+  "fire-safety": {
+    "title": "Fire Safety",
+    "slug": "fire-safety",
+    "image": "https://images.unsplash.com/photo-1599700403969-fcf01ab715d5?q=80&w=1200&auto=format&fit=crop",
+    "description": "This service is dedicated to empowering individuals with the knowledge to prevent and respond to fire emergencies. The training goes beyond compliance, focusing on practical, life-saving skills for real-life industrial and commercial environments.",
+    "fullContent": "Fire hazards are among the most serious risks in any industrial or commercial setting. Our Fire Safety programs provide hands-on experience with equipment and realistic emergency protocols. We ensure your team is not just aware of fire safety, but capable of leading others to safety during a crisis.",
+    "icon": "flame",
+    "programs": [
+      { "title": "Fire Extinguisher Training", "desc": "Hands-on practice with various types of extinguishers on controlled live fires." },
+      { "title": "Evacuation Drills", "desc": "Simulated emergency scenarios to test and refine response times." },
+      { "title": "Risk Assessment", "desc": "Identifying potential ignition sources and fuel loads in your facility." },
+      { "title": "Fire Warden Training", "desc": "Specialized leadership training for designated safety personnel." },
+      { "title": "System Consultancy", "desc": "Expert advice on alarm, detection, and suppression systems." }
+    ],
+    "benefits": [
+      "Immediate capability to suppress minor fires",
+      "Orderly and safe building evacuations",
+      "Deep understanding of fire chemistry and prevention",
+      "Compliance with national fire safety codes"
+    ],
+    "standards": "NFPA (National Fire Protection Association) & National Building Code (NBC)"
+  },
+  "road-safety": {
+    "title": "Defensive Driving & Road Safety",
+    "slug": "road-safety",
+    "image": "https://images.unsplash.com/photo-1449965072345-452729d6622b?q=80&w=1200&auto=format&fit=crop",
+    "description": "Comprehensive training designed to reduce road accidents through prevention. We instill a profound understanding of responsible behavior, hazard perception, and advanced vehicle handling techniques.",
+    "fullContent": "With road accidents being a leading cause of workplace-related fatalities, our Road Safety program is critical for corporate fleets and individual drivers. We focus on the psychology of driving, hazard anticipation, and technical skills that prevent incidents before they occur.",
+    "icon": "car",
+    "programs": [
+      { "title": "Defensive Driving Techniques", "desc": "Core skills for maintaining safety in unpredictable traffic conditions." },
+      { "title": "Hazard Perception", "desc": "Interactive training to identify and anticipate risks early." },
+      { "title": "Collision Avoidance", "desc": "Technical maneuvers to safely escape potential impact scenarios." },
+      { "title": "Fleet Safety Management", "desc": "Monitoring and improving driver standards across large organizations." },
+      { "title": "Emergency Road Response", "desc": "Immediate actions to take following a vehicular incident." }
+    ],
+    "benefits": [
+      "Significant reduction in vehicle collision rates",
+      "Lower insurance premiums and maintenance costs",
+      "Improved driver confidence and responsibility",
+      "Protection of the organization's mobile assets"
+    ],
+    "standards": "Global Road Safety Benchmarks & Defensive Driving Standards"
+  },
+  "industrial-safety": {
+    "title": "Industrial Safety",
+    "slug": "industrial-safety",
+    "image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1200&auto=format&fit=crop",
+    "description": "Multi-disciplinary field focusing on preventing workplace illnesses and injuries through rigorous strategies. Covers a wide range of high-risk activities from height work to chemical handling.",
+    "fullContent": "Today's industrial environments demand robust safety protocols. Our Industrial Safety programs address the complexity of modern manufacturing and construction. We provide technical depth in critical areas like fall protection, energy isolation, and hazardous space entry.",
+    "icon": "hard-hat",
+    "programs": [
+      { "title": "LOTO (Lockout Tagout)", "desc": "Procedures for isolating energy sources during maintenance." },
+      { "title": "Work at Height", "desc": "Fall protection, ladder safety, and scaffolding protocols." },
+      { "title": "Confined Space Entry", "desc": "Safety measures for working in restricted environments." },
+      { "title": "HIRA", "desc": "Advanced Hazard Identification and Risk Assessment methodologies." },
+      { "title": "BBS (Behavioral Safety)", "desc": "Influencing workplace culture through behavior-based insights." }
+    ],
+    "benefits": [
+      "Direct reduction in LTIs (Lost Time Injuries)",
+      "Technical mastery of high-risk tasks",
+      "Regulatory alignment with global site standards",
+      "Enhanced operational efficiency through safe practices"
+    ],
+    "standards": "OSHA (Occupational Safety and Health Administration) & IS Standards"
+  },
+  "audits-inspections": {
+    "title": "Audits & Inspections",
+    "slug": "audits-inspections",
+    "image": "https://images.unsplash.com/photo-1454165833267-023020610f44?q=80&w=1200&auto=format&fit=crop",
+    "description": "Systematic procedures for gathering independent information on safety systems. We verify compliance and develop corrective action plans to ensure a zero-harm working environment.",
+    "fullContent": "An audit is a mirror to your organization's safety health. Our expert auditors provide an unbiased, deep-dive into your processes, infrastructure, and compliance levels. We don't just find faults; we provide clear, actionable pathways to improvement.",
+    "icon": "clipboard-check",
+    "programs": [
+      { "title": "EHS Compliance Audits", "desc": "Full-spectrum environmental, health, and safety verification." },
+      { "title": "ISO Certification Audits", "desc": "Support for ISO 9001, 14001, and 45001 standards." },
+      { "title": "Electrical Safety Audits", "desc": "Specialized inspection of electrical systems and grounding." },
+      { "title": "Construction Safety Audits", "desc": "Phased safety checks for dynamic construction sites." },
+      { "title": "Institutional Inspections", "desc": "Focused safety audits for schools, hospitals, and public venues." }
+    ],
+    "benefits": [
+      "Identification of hidden risks and liabilities",
+      "Ensured compliance with all legal and regulatory mandates",
+      "Benchmark against industry safety leaders",
+      "Detailed roadmap for continuous safety improvement"
+    ],
+    "standards": "ISO 45001, ISO 14001 & Statutory Safety Compliance Laws"
+  },
+  "safety-equipment": {
+    "title": "Safety Equipment (PPE)",
+    "slug": "safety-equipment",
+    "image": "https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1200&auto=format&fit=crop",
+    "description": "Specialized training and guidance on the selection, usage, and maintenance of PPE. We ensure your final line of defense is robust and personnel are effectively protected.",
+    "fullContent": "PPE is only effective when it is the right equipment for the hazard and is used correctly. We provide deep expertise in selecting the appropriate gear for specific industrial risks and training workers on their maintenance and limitations.",
+    "icon": "package",
+    "programs": [
+      { "title": "PPE Selection Support", "desc": "Matching specific hazards with the correct protective gear." },
+      { "title": "Head, Eye & Face Protection", "desc": "Deep-dives into helmets, goggles, and face shield standards." },
+      { "title": "Respiratory Protection", "desc": "Fit testing and maintenance for various masking systems." },
+      { "title": "Fall Protection Gear", "desc": "Technical training on harnesses, lanyards, and anchor points." },
+      { "title": "PPE Maintenance & Audits", "desc": "Systems for tracking equipment lifecycle and integrity." }
+    ],
+    "benefits": [
+      "Maximum protection through correct equipment usage",
+      "Increased worker confidence and productivity",
+      "Reduced costs through proper equipment maintenance",
+      "Meeting mandatory personal safety regulations"
+    ],
+    "standards": "ANSI/ISEA & OSHA PPE Standards"
+  }
+}

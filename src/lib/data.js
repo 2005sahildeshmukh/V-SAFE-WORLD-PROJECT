@@ -53,3 +53,12 @@ export function getBlogs() {
 export function getClients() {
   return readData('clients.json') || [];
 }
+
+export function getServices() {
+  return readData('services.json') || {};
+}
+
+export function getService(slug) {
+  const services = getServices();
+  return services[slug] || null;
+}

@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import PageHero from '@/components/sections/PageHero';
 import { Package, ArrowRight } from 'lucide-react';
@@ -13,8 +14,24 @@ const categories = [
   { id: 'other', label: 'Other Equipment' },
 ];
 
-export default function EquipmentClient({ equipment }) {
-  const [activeTab, setActiveTab] = useState('all');
+function EquipmentContent({ equipment }) {
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get('category');
+  
+  // Initialize state based on URL if present
+  const [activeTab, setActiveTab] = useState(() => {
+    if (categoryParam && categories.some(cat => cat.id === categoryParam)) {
+      return categoryParam;
+    }
+    return 'all';
+  });
+
+  useEffect(() => {
+    if (categoryParam && categories.some(cat => cat.id === categoryParam)) {
+      setActiveTab(categoryParam);
+    }
+  }, [categoryParam]);
+
   const filtered = activeTab === 'all' ? equipment : equipment.filter((e) => e.category === activeTab);
 
   return (
@@ -59,5 +76,13 @@ export default function EquipmentClient({ equipment }) {
         </div>
       </section>
     </>
+  );
+}
+
+export default function EquipmentClient({ equipment }) {
+  return (
+    <Suspense fallback={<div>Loading equipment...</div>}>
+      <EquipmentContent equipment={equipment} />
+    </Suspense>
   );
 }

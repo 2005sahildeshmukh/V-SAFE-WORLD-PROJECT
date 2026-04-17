@@ -641,13 +641,49 @@
 }
 
 .trainingOverlay p {
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.75);
-  line-height: 1.5;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.4;
   margin-bottom: var(--space-md);
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.05s;
+}
+
+.cardFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-lg) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+}
+
+.trainingCard:hover .cardFeatures {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cardFeatures li {
+  font-size: 0.85rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.cardFeatures li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 .trainingCard:hover .trainingOverlay p {

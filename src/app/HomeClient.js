@@ -104,63 +104,88 @@ export default function HomeClient({ testimonials }) {
         </div>
 
         <div className={styles.trainingsGrid}>
-          <Link href="/trainings" className={`${styles.trainingCard} ${styles.trainingCardLarge}`} style={{ backgroundImage: `url("${healthWellnessImg.src}")` }}>
+          <Link href="/services/health-wellness" className={`${styles.trainingCard} ${styles.trainingCardLarge}`} style={{ backgroundImage: `url("${healthWellnessImg.src}")` }}>
             <div className={styles.trainingOverlay}>
               <span className={styles.trainingNum}>01</span>
               <div className={styles.trainingInfo}>
                 <h3>Health &amp; Wellness</h3>
-                <p>CPR, First Aid, POSH, Mental Health, Ergonomics &amp; more</p>
-                <span className={styles.trainingReadMore}>Explore <ArrowRight size={14} /></span>
+                <p>Comprehensive CPR, First Aid, POSH awareness, and mental health programs to foster a safe and healthy workplace environment.</p>
+                <ul className={styles.cardFeatures}>
+                  <li>Basic Life Support (BLS)</li>
+                  <li>Workplace First Aid</li>
+                  <li>Stress Management</li>
+                </ul>
+                <span className={styles.trainingReadMore}>Explore Programs <ArrowRight size={14} /></span>
               </div>
             </div>
           </Link>
-          <Link href="/trainings" className={styles.trainingCard} style={{ backgroundImage: `url("${fireSafetyImg.src}")` }}>
+          <Link href="/services/fire-safety" className={styles.trainingCard} style={{ backgroundImage: `url("${fireSafetyImg.src}")` }}>
             <div className={styles.trainingOverlay}>
               <span className={styles.trainingNum}>02</span>
               <div className={styles.trainingInfo}>
                 <h3>Fire Safety</h3>
-                <p>Extinguisher, Fire Fighting, Evacuation Drills</p>
+                <p>Expert-led training on fire prevention, extinguisher usage, and evacuation drills for maximum preparedness.</p>
+                <ul className={styles.cardFeatures}>
+                  <li>Fire Warden Training</li>
+                  <li>Mock Evacuation Drills</li>
+                </ul>
                 <span className={styles.trainingReadMore}>Explore <ArrowRight size={14} /></span>
               </div>
             </div>
           </Link>
-          <Link href="/trainings" className={styles.trainingCard} style={{ backgroundImage: `url("${defensiveDrivingImg.src}")` }}>
+          <Link href="/services/road-safety" className={styles.trainingCard} style={{ backgroundImage: `url("${defensiveDrivingImg.src}")` }}>
             <div className={styles.trainingOverlay}>
               <span className={styles.trainingNum}>03</span>
               <div className={styles.trainingInfo}>
                 <h3>Defensive Driving</h3>
-                <p>Two Wheeler, LMV, HMV, Simulator Training</p>
+                <p>Advanced road safety workshops and vehicle handling techniques to reduce accident risks and improve driver behavior.</p>
+                <ul className={styles.cardFeatures}>
+                  <li>Hazard Anticipation</li>
+                  <li>Technical Handling</li>
+                </ul>
                 <span className={styles.trainingReadMore}>Explore <ArrowRight size={14} /></span>
               </div>
             </div>
           </Link>
-          <Link href="/trainings" className={styles.trainingCard} style={{ backgroundImage: `url("${industrialSafetyImg.src}")` }}>
+          <Link href="/services/industrial-safety" className={styles.trainingCard} style={{ backgroundImage: `url("${industrialSafetyImg.src}")` }}>
             <div className={styles.trainingOverlay}>
               <span className={styles.trainingNum}>04</span>
               <div className={styles.trainingInfo}>
                 <h3>Industrial Safety</h3>
-                <p>BBS, Work At Height, LOTO, Chemical Safety</p>
+                <p>Specialized training for high-risk environments, including Work at Height, LOTO, and confined space protocols.</p>
+                <ul className={styles.cardFeatures}>
+                  <li>LOTO Procedures</li>
+                  <li>Confined Space Entry</li>
+                </ul>
                 <span className={styles.trainingReadMore}>Explore <ArrowRight size={14} /></span>
               </div>
             </div>
           </Link>
-          <Link href="/audits" className={styles.trainingCard} style={{ backgroundImage: `url("${auditsImg.src}")` }}>
+          <Link href="/services/audits-inspections" className={styles.trainingCard} style={{ backgroundImage: `url("${auditsImg.src}")` }}>
             <div className={styles.trainingOverlay}>
               <span className={styles.trainingNum}>05</span>
               <div className={styles.trainingInfo}>
                 <h3>Audits &amp; Inspection</h3>
-                <p>Compliance audits, safety inspections &amp; gap analysis</p>
+                <p>Systematic safety evaluations and compliance audits with detailed professional reports and recommendations.</p>
+                <ul className={styles.cardFeatures}>
+                  <li>EHS Compliance</li>
+                  <li>Electrical Safety Audits</li>
+                </ul>
                 <span className={styles.trainingReadMore}>Explore <ArrowRight size={14} /></span>
               </div>
             </div>
           </Link>
-          <Link href="/equipment" className={`${styles.trainingCard} ${styles.trainingCardWide}`} style={{ backgroundImage: `url("${ppeImg.src}")` }}>
+          <Link href="/services/safety-equipment" className={`${styles.trainingCard} ${styles.trainingCardWide}`} style={{ backgroundImage: `url("${ppeImg.src}")` }}>
             <div className={styles.trainingOverlay}>
               <span className={styles.trainingNum}>06</span>
               <div className={styles.trainingInfo}>
                 <h3>Safety Equipment (PPE)</h3>
-                <p>Premium personal protective equipment for every industry</p>
-                <span className={styles.trainingReadMore}>Explore <ArrowRight size={14} /></span>
+                <p>Professional guidance and supply of premium personal protective equipment tailored to specific industrial hazards.</p>
+                <ul className={styles.cardFeatures}>
+                  <li>Head & Eye Protection</li>
+                  <li>Respiratory Gear</li>
+                </ul>
+                <span className={styles.trainingReadMore}>View Catalog <ArrowRight size={14} /></span>
               </div>
             </div>
           </Link>
