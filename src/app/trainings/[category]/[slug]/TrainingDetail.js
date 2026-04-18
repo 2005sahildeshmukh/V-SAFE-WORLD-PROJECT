@@ -2,9 +2,9 @@
 
 import PageHero from '@/components/sections/PageHero';
 import Link from 'next/link';
-import Image from 'next/image';
 import { CheckCircle, ArrowRight, BookOpen, ShieldCheck, HeartPulse, Flame, Car, HardHat, Siren } from 'lucide-react';
 import styles from './trainingDetail.module.css';
+import { assetPath } from '@/lib/assetPath';
 
 const iconMap = {
   'heart-pulse': <HeartPulse size={48} />,
@@ -44,7 +44,7 @@ export default function TrainingDetail({ training }) {
             <div className={styles.mainContent}>
               <div className={styles.imageWrapper}>
                 {training.image ? (
-                  <Image src={training.image} alt={training.title} fill className={styles.mainImage} />
+                  <img src={assetPath(training.image)} alt={training.title} className={styles.mainImage} />
                 ) : (
                   <div className={styles.placeholderImage}>No Image Available</div>
                 )}

@@ -7,6 +7,7 @@ import {
   CheckCircle, ArrowRight, ShieldCheck, Award, Info
 } from 'lucide-react';
 import styles from '../services.module.css';
+import { assetPath } from '@/lib/assetPath';
 
 const iconMap = {
   'heart-pulse': <HeartPulse size={48} />,
@@ -56,7 +57,7 @@ export default function ServicePage({ params }) {
           <div className={styles.introGrid}>
             <div className={styles.mainText}>
               <div className={styles.featuredImageWrapper}>
-                <img src={service.image} alt={service.title} className={styles.featuredImage} />
+                <img src={assetPath(service.image)} alt={service.title} className={styles.featuredImage} />
                 <div className={styles.imageOverlay}></div>
                 <div className={styles.iconBoxFloating}>
                   {iconMap[service.icon]}
