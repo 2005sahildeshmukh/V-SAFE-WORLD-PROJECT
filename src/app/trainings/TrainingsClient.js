@@ -75,12 +75,12 @@ function TrainingsContent({ trainings }) {
 
           <div className={styles.cardsGrid}>
             {filtered.map((training) => (
-              <div key={training.id} className={styles.card}>
+              <Link href={`/trainings/${training.category}/${training.id}`} key={training.id} className={styles.card}>
                 <div className={styles.cardIcon}>{iconMap[training.icon] || <BookOpen size={26} />}</div>
                 <span className={styles.cardCategory}>{categoryLabels[training.category]}</span>
                 <h3>{training.title}</h3>
                 <p>{training.shortDescription}</p>
-              </div>
+              </Link>
             ))}
           </div>
 

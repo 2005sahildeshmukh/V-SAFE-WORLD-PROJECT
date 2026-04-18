@@ -163,20 +163,33 @@ export default function Header({ settings }) {
                 {item.hasMegaMenu && (
                   <div className={styles.megaMenu}>
                     <div className={styles.megaMenuInner}>
-                      {trainingCategories.map((cat, idx) => (
-                        <div key={idx} className={styles.megaColumn}>
-                          <h4>{cat.title}</h4>
-                          <ul>
-                            {cat.items.map((sub, sIdx) => (
-                              <li key={sIdx}>
-                                <Link href={`/trainings#${sub.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}`}>
-                                  {sub}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
+                      {trainingCategories.map((cat, idx) => {
+                        const catSlug = {
+                          'Health & Wellness': 'health-wellness',
+                          'Fire Safety Training': 'fire-safety',
+                          'Road Safety - Defensive Driving': 'road-safety',
+                          'Industrial Safety': 'industrial-safety',
+                          'Disaster Management': 'disaster-management'
+                        }[cat.title] || 'general';
+
+                        return (
+                          <div key={idx} className={styles.megaColumn}>
+                            <h4>{cat.title}</h4>
+                            <ul>
+                              {cat.items.map((sub, sIdx) => {
+                                const subSlug = sub.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+                                return (
+                                  <li key={sIdx}>
+                                    <Link href={`/trainings/${catSlug}/${subSlug}`}>
+                                      {sub}
+                                    </Link>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 )}
@@ -222,23 +235,36 @@ export default function Header({ settings }) {
               </div>
               {item.hasMegaMenu && mobileTrainingsOpen && (
                 <div className={styles.mobileMegaMenu}>
-                  {trainingCategories.map((cat, idx) => (
-                    <div key={idx} className={styles.mobileMegaColumn}>
-                      <h4>{cat.title}</h4>
-                      <ul>
-                        {cat.items.map((sub, sIdx) => (
-                          <li key={sIdx}>
-                            <Link
-                              href={`/trainings#${sub.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}`}
-                              onClick={() => setMobileOpen(false)}
-                            >
-                              {sub}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+                  {trainingCategories.map((cat, idx) => {
+                    const catSlug = {
+                      'Health & Wellness': 'health-wellness',
+                      'Fire Safety Training': 'fire-safety',
+                      'Road Safety - Defensive Driving': 'road-safety',
+                      'Industrial Safety': 'industrial-safety',
+                      'Disaster Management': 'disaster-management'
+                    }[cat.title] || 'general';
+
+                    return (
+                      <div key={idx} className={styles.mobileMegaColumn}>
+                        <h4>{cat.title}</h4>
+                        <ul>
+                          {cat.items.map((sub, sIdx) => {
+                            const subSlug = sub.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+                            return (
+                              <li key={sIdx}>
+                                <Link
+                                  href={`/trainings/${catSlug}/${subSlug}`}
+                                  onClick={() => setMobileOpen(false)}
+                                >
+                                  {sub}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    );
+                  })}
                 </div>
               )}
             </div>

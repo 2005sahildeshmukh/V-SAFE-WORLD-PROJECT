@@ -2,7 +2,7 @@
   "health-wellness": {
     "title": "Health & Wellness",
     "slug": "health-wellness",
-    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop",
+    "image": "/images/services/health-wellness.jpg",
     "description": "Mount Safety's health and wellness services focus on the active pursuit of a healthy lifestyle to enhance overall physical, mental, and social well-being. These programs are designed to integrate safety into daily life through live demonstrations and interactive learning.",
     "fullContent": "Our comprehensive Health & Wellness programs are designed to transition safety from a workplace requirement to a lifestyle choice. By focusing on both preventive and reactive measures, we help organizations build a resilient workforce. From basic life support to mental health and ergonomics, we cover every aspect of employee well-being.",
     "icon": "heart-pulse",
@@ -24,7 +24,7 @@
   "fire-safety": {
     "title": "Fire Safety",
     "slug": "fire-safety",
-    "image": "https://images.unsplash.com/photo-1599700403969-fcf01ab715d5?q=80&w=1200&auto=format&fit=crop",
+    "image": "/images/services/fire-safety.jpg",
     "description": "This service is dedicated to empowering individuals with the knowledge to prevent and respond to fire emergencies. The training goes beyond compliance, focusing on practical, life-saving skills for real-life industrial and commercial environments.",
     "fullContent": "Fire hazards are among the most serious risks in any industrial or commercial setting. Our Fire Safety programs provide hands-on experience with equipment and realistic emergency protocols. We ensure your team is not just aware of fire safety, but capable of leading others to safety during a crisis.",
     "icon": "flame",
@@ -46,7 +46,7 @@
   "road-safety": {
     "title": "Defensive Driving & Road Safety",
     "slug": "road-safety",
-    "image": "https://images.unsplash.com/photo-1449965072345-452729d6622b?q=80&w=1200&auto=format&fit=crop",
+    "image": "/images/services/defensive-driving.avif",
     "description": "Comprehensive training designed to reduce road accidents through prevention. We instill a profound understanding of responsible behavior, hazard perception, and advanced vehicle handling techniques.",
     "fullContent": "With road accidents being a leading cause of workplace-related fatalities, our Road Safety program is critical for corporate fleets and individual drivers. We focus on the psychology of driving, hazard anticipation, and technical skills that prevent incidents before they occur.",
     "icon": "car",
@@ -68,7 +68,7 @@
   "industrial-safety": {
     "title": "Industrial Safety",
     "slug": "industrial-safety",
-    "image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1200&auto=format&fit=crop",
+    "image": "/images/services/industrial-safety.jpg",
     "description": "Multi-disciplinary field focusing on preventing workplace illnesses and injuries through rigorous strategies. Covers a wide range of high-risk activities from height work to chemical handling.",
     "fullContent": "Today's industrial environments demand robust safety protocols. Our Industrial Safety programs address the complexity of modern manufacturing and construction. We provide technical depth in critical areas like fall protection, energy isolation, and hazardous space entry.",
     "icon": "hard-hat",
@@ -90,7 +90,7 @@
   "audits-inspections": {
     "title": "Audits & Inspections",
     "slug": "audits-inspections",
-    "image": "https://images.unsplash.com/photo-1454165833267-023020610f44?q=80&w=1200&auto=format&fit=crop",
+    "image": "/images/services/audits-inspections.jpeg",
     "description": "Systematic procedures for gathering independent information on safety systems. We verify compliance and develop corrective action plans to ensure a zero-harm working environment.",
     "fullContent": "An audit is a mirror to your organization's safety health. Our expert auditors provide an unbiased, deep-dive into your processes, infrastructure, and compliance levels. We don't just find faults; we provide clear, actionable pathways to improvement.",
     "icon": "clipboard-check",
@@ -112,7 +112,7 @@
   "safety-equipment": {
     "title": "Safety Equipment (PPE)",
     "slug": "safety-equipment",
-    "image": "https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1200&auto=format&fit=crop",
+    "image": "/images/services/safety-equipment.jpg",
     "description": "Specialized training and guidance on the selection, usage, and maintenance of PPE. We ensure your final line of defense is robust and personnel are effectively protected.",
     "fullContent": "PPE is only effective when it is the right equipment for the hazard and is used correctly. We provide deep expertise in selecting the appropriate gear for specific industrial risks and training workers on their maintenance and limitations.",
     "icon": "package",
