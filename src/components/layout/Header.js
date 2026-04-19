@@ -97,6 +97,7 @@ export default function Header({ settings }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileTrainingsOpen, setMobileTrainingsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [forceCloseMegaMenu, setForceCloseMegaMenu] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -109,6 +110,13 @@ export default function Header({ settings }) {
     setMobileOpen(false);
     setMobileTrainingsOpen(false);
   }, [pathname]);
+
+  const handleMegaMenuClick = () => {
+    setForceCloseMegaMenu(true);
+    setTimeout(() => {
+      setForceCloseMegaMenu(false);
+    }, 200);
+  };
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
@@ -155,13 +163,14 @@ export default function Header({ settings }) {
                 <Link
                   href={item.href}
                   className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
+                  onClick={item.hasMegaMenu ? handleMegaMenuClick : undefined}
                 >
                   {item.label}
                   {item.hasMegaMenu && <ChevronDown size={14} style={{ marginLeft: 4 }} />}
                 </Link>
 
                 {item.hasMegaMenu && (
-                  <div className={styles.megaMenu}>
+                  <div className={styles.megaMenu} style={forceCloseMegaMenu ? { display: 'none' } : undefined}>
                     <div className={styles.megaMenuInner}>
                       {trainingCategories.map((cat, idx) => {
                         const catSlug = {
@@ -180,7 +189,10 @@ export default function Header({ settings }) {
                                 const subSlug = sub.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
                                 return (
                                   <li key={sIdx}>
-                                    <Link href={`/trainings/${catSlug}/${subSlug}`}>
+                                    <Link 
+                                      href={`/trainings/${catSlug}/${subSlug}`}
+                                      onClick={handleMegaMenuClick}
+                                    >
                                       {sub}
                                     </Link>
                                   </li>
