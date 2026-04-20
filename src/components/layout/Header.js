@@ -83,11 +83,30 @@ const trainingCategories = [
   }
 ];
 
+const auditCategories = [
+  {
+    title: 'Compliance & Management',
+    items: ['EHS Audits', 'ISO 45001', 'Workplace Safety Audit', 'School Audits']
+  },
+  {
+    title: 'Specialized Safety',
+    items: ['Fire Safety Audit', 'Electrical Safety Audit', 'Warehouse Safety Audit', 'Event Safety Audit', 'Emergency Preparedness Audit']
+  },
+  {
+    title: 'Transportation & Logistics',
+    items: ['2W/4W/HMV Vehicles Audit', 'Road Safety Audit', 'Journey Risk Management', 'Forklift/Crane Inspection']
+  },
+  {
+    title: 'Site & Field Inspections',
+    items: ['Confined Space Inspection', 'Construction Site Inspection', 'Scaffolding Inspection']
+  }
+];
+
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
-  { label: 'Trainings', href: '/trainings', hasMegaMenu: true },
-  { label: 'Audits and Inspections', href: '/audits' },
+  { label: 'Trainings', href: '/trainings', hasMegaMenu: true, categories: trainingCategories, slug: 'trainings' },
+  { label: 'Audits and Inspections', href: '/audits', hasMegaMenu: true, categories: auditCategories, slug: 'audits' },
   { label: 'Safety Equipment (PPEs)', href: '/equipment' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Contact Us', href: '/contact' },
@@ -95,7 +114,7 @@ const navItems = [
 
 export default function Header({ settings }) {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileTrainingsOpen, setMobileTrainingsOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState({}); // Track multiple submenus
   const [scrolled, setScrolled] = useState(false);
   const [forceCloseMegaMenu, setForceCloseMegaMenu] = useState(false);
   const pathname = usePathname();
@@ -108,7 +127,7 @@ export default function Header({ settings }) {
 
   useEffect(() => {
     setMobileOpen(false);
-    setMobileTrainingsOpen(false);
+    setMobileMenuOpen({});
   }, [pathname]);
 
   const handleMegaMenuClick = () => {
@@ -172,14 +191,8 @@ export default function Header({ settings }) {
                 {item.hasMegaMenu && (
                   <div className={styles.megaMenu} style={forceCloseMegaMenu ? { display: 'none' } : undefined}>
                     <div className={styles.megaMenuInner}>
-                      {trainingCategories.map((cat, idx) => {
-                        const catSlug = {
-                          'Health & Wellness': 'health-wellness',
-                          'Fire Safety Training': 'fire-safety',
-                          'Road Safety - Defensive Driving': 'road-safety',
-                          'Industrial Safety': 'industrial-safety',
-                          'Disaster Management': 'disaster-management'
-                        }[cat.title] || 'general';
+                      {item.categories.map((cat, idx) => {
+                        const catSlug = cat.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
                         return (
                           <div key={idx} className={styles.megaColumn}>
@@ -190,7 +203,7 @@ export default function Header({ settings }) {
                                 return (
                                   <li key={sIdx}>
                                     <Link 
-                                      href={`/trainings/${catSlug}/${subSlug}`}
+                                      href={`/${item.slug}/${catSlug}/${subSlug}`}
                                       onClick={handleMegaMenuClick}
                                     >
                                       {sub}
@@ -238,23 +251,17 @@ export default function Header({ settings }) {
                 </Link>
                 {item.hasMegaMenu && (
                   <button
-                    onClick={() => setMobileTrainingsOpen(!mobileTrainingsOpen)}
+                    onClick={() => setMobileMenuOpen(prev => ({ ...prev, [item.slug]: !prev[item.slug] }))}
                     className={styles.mobileToggleBtn}
                   >
-                    <ChevronDown size={18} className={mobileTrainingsOpen ? styles.rotate : ''} />
+                    <ChevronDown size={18} className={mobileMenuOpen[item.slug] ? styles.rotate : ''} />
                   </button>
                 )}
               </div>
-              {item.hasMegaMenu && mobileTrainingsOpen && (
+              {item.hasMegaMenu && mobileMenuOpen[item.slug] && (
                 <div className={styles.mobileMegaMenu}>
-                  {trainingCategories.map((cat, idx) => {
-                    const catSlug = {
-                      'Health & Wellness': 'health-wellness',
-                      'Fire Safety Training': 'fire-safety',
-                      'Road Safety - Defensive Driving': 'road-safety',
-                      'Industrial Safety': 'industrial-safety',
-                      'Disaster Management': 'disaster-management'
-                    }[cat.title] || 'general';
+                  {item.categories.map((cat, idx) => {
+                    const catSlug = cat.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
                     return (
                       <div key={idx} className={styles.mobileMegaColumn}>
@@ -265,7 +272,7 @@ export default function Header({ settings }) {
                             return (
                               <li key={sIdx}>
                                 <Link
-                                  href={`/trainings/${catSlug}/${subSlug}`}
+                                  href={`/${item.slug}/${catSlug}/${subSlug}`}
                                   onClick={() => setMobileOpen(false)}
                                 >
                                   {sub}
