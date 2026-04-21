@@ -71,9 +71,10 @@ export default function HomeClient({ testimonials }) {
           <div className={styles.aboutText}>
             <h2>About <span>V-Safe World</span></h2>
             <p>
-              V-Safe World Pvt Ltd is a leading provider of comprehensive Environment, Health, and Safety (EHS) solutions.
-              We specialize in delivering world-class safety training programs, conducting thorough audits and inspections,
-              supplying premium safety equipment, and providing expert consultancy services.
+              V-Safe World is committed to delivering high-quality Health &amp; Safety Training, Audits, Consultancy and PPE Solutions to ensure safe, compliant and sustainable workplaces.
+            </p>
+            <p style={{ marginTop: '1rem' }}>
+              We work to protect people, property and the environment by proactively preventing risks, incidents and injuries. Through our expertise, dedication and continuous improvement, we build a strong culture of safety excellence across all operations.
             </p>
             <div className={styles.aboutFeatures}>
               <div className={styles.aboutFeature}><CheckCircle size={18} /> Certified Trainers</div>
