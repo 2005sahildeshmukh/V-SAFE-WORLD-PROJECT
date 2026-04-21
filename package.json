@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "predeploy": "npm run build",
-    "deploy": "cmd /c type nul > out\\.nojekyll && gh-pages -d out -t"
+    "deploy": "powershell -ExecutionPolicy Bypass -File Scripts/deploy.ps1"
   },
   "dependencies": {
     "lucide-react": "^1.8.0",
