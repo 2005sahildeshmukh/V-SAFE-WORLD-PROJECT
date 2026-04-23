@@ -9,6 +9,7 @@ import styles from './Header.module.css';
 const trainingCategories = [
   {
     title: 'Health & Wellness',
+    slug: 'health-wellness',
     items: [
       'First Aid, CPR & AED Training',
       'POSH Awareness',
@@ -22,6 +23,7 @@ const trainingCategories = [
   },
   {
     title: 'Fire Safety Training',
+    slug: 'fire-safety',
     items: [
       'Fire Extinguisher Training',
       'Fire Fighting Training',
@@ -32,6 +34,7 @@ const trainingCategories = [
   },
   {
     title: 'Road Safety - Defensive Driving',
+    slug: 'road-safety',
     items: [
       'Two Wheeler Riders',
       'Light Motor Vehicle',
@@ -52,6 +55,7 @@ const trainingCategories = [
   },
   {
     title: 'Industrial Safety',
+    slug: 'industrial-safety',
     items: [
       'Industrial Safety Mela',
       'Behaviour Based Safety',
@@ -70,6 +74,7 @@ const trainingCategories = [
   },
   {
     title: 'Disaster Management',
+    slug: 'disaster-management',
     items: [
       'Evacuation Drill',
       'Disaster Preparedness Training',
@@ -86,18 +91,22 @@ const trainingCategories = [
 const auditCategories = [
   {
     title: 'Compliance & Management',
+    slug: 'compliance-management',
     items: ['EHS Audits', 'ISO 45001', 'Workplace Safety Audit', 'School Audits']
   },
   {
     title: 'Specialized Safety',
+    slug: 'specialized-safety',
     items: ['Fire Safety Audit', 'Electrical Safety Audit', 'Warehouse Safety Audit', 'Event Safety Audit', 'Emergency Preparedness Audit']
   },
   {
     title: 'Transportation & Logistics',
+    slug: 'transportation-logistics',
     items: ['2W/4W/HMV Vehicles Audit', 'Road Safety Audit', 'Journey Risk Management', 'Forklift/Crane Inspection']
   },
   {
     title: 'Site & Field Inspections',
+    slug: 'site-field-inspections',
     items: ['Confined Space Inspection', 'Construction Site Inspection', 'Scaffolding Inspection']
   }
 ];
@@ -192,8 +201,6 @@ export default function Header({ settings }) {
                   <div className={styles.megaMenu} style={forceCloseMegaMenu ? { display: 'none' } : undefined}>
                     <div className={styles.megaMenuInner}>
                       {item.categories.map((cat, idx) => {
-                        const catSlug = cat.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
                         return (
                           <div key={idx} className={styles.megaColumn}>
                             <h4>{cat.title}</h4>
@@ -203,7 +210,7 @@ export default function Header({ settings }) {
                                 return (
                                   <li key={sIdx}>
                                     <Link 
-                                      href={`/${item.slug}/${catSlug}/${subSlug}`}
+                                      href={`/${item.slug}/${cat.slug}/${subSlug}`}
                                       onClick={handleMegaMenuClick}
                                     >
                                       {sub}
@@ -261,8 +268,6 @@ export default function Header({ settings }) {
               {item.hasMegaMenu && mobileMenuOpen[item.slug] && (
                 <div className={styles.mobileMegaMenu}>
                   {item.categories.map((cat, idx) => {
-                    const catSlug = cat.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
                     return (
                       <div key={idx} className={styles.mobileMegaColumn}>
                         <h4>{cat.title}</h4>
@@ -272,7 +277,7 @@ export default function Header({ settings }) {
                             return (
                               <li key={sIdx}>
                                 <Link
-                                  href={`/${item.slug}/${catSlug}/${subSlug}`}
+                                  href={`/${item.slug}/${cat.slug}/${subSlug}`}
                                   onClick={() => setMobileOpen(false)}
                                 >
                                   {sub}
