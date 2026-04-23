@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[67542,["/V-SAFE-WORLD-PROJECT/_next/static/chunks/0kddoa~x_jv99.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0nxqe939v1l0~.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0d3shmwh5_nmn.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0wyop8gp8y74w.js"],"default"]
+3:I[97367,["/V-SAFE-WORLD-PROJECT/_next/static/chunks/0kddoa~x_jv99.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0nxqe939v1l0~.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+:HL["/V-SAFE-WORLD-PROJECT/_next/static/chunks/0c56zyv1vdt8m.css","style"]
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"training":{"id":"hira","title":"HIRA","category":"industrial-safety","icon":"hard-hat","shortDescription":"Professional and comprehensive modules for HIRA.","fullDescription":"The HIRA course is specifically designed for modern industrial and corporate environments. Our expert trainers deliver actionable knowledge, comprehensive best practices, and hands-on scenarios tailored to the needs of your specialized teams.","image":"/images/trainings/industrial-safety-hira.jpg","featured":false}}],[["$","link","0",{"rel":"stylesheet","href":"/V-SAFE-WORLD-PROJECT/_next/static/chunks/0c56zyv1vdt8m.css","precedence":"next"}],["$","script","script-0",{"src":"/V-SAFE-WORLD-PROJECT/_next/static/chunks/0wyop8gp8y74w.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"gaZZLipGtybwNkdkhos8u"}
+5:null

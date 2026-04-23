@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[22077,["/V-SAFE-WORLD-PROJECT/_next/static/chunks/0kddoa~x_jv99.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0nxqe939v1l0~.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0d3shmwh5_nmn.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/01grsd3kfzru3.js"],"default"]
+3:I[97367,["/V-SAFE-WORLD-PROJECT/_next/static/chunks/0kddoa~x_jv99.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0nxqe939v1l0~.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+:HL["/V-SAFE-WORLD-PROJECT/_next/static/chunks/0c56zyv1vdt8m.css","style"]
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"audit":{"id":"event-safety-audit","title":"Event Safety Audit","category":"specialized-safety","icon":"tent","shortDescription":"Safety planning and on-site audit services for large events and gatherings.","fullDescription":"From crowd management to temporary structures, our event safety audits ensure that your gatherings are safe for attendees and staff. We cover risk assessments, emergency planning, and on-site compliance monitoring.","image":"/images/audits/Event Safety Audit.jpg"}}],[["$","link","0",{"rel":"stylesheet","href":"/V-SAFE-WORLD-PROJECT/_next/static/chunks/0c56zyv1vdt8m.css","precedence":"next"}],["$","script","script-0",{"src":"/V-SAFE-WORLD-PROJECT/_next/static/chunks/01grsd3kfzru3.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"gaZZLipGtybwNkdkhos8u"}
+5:null

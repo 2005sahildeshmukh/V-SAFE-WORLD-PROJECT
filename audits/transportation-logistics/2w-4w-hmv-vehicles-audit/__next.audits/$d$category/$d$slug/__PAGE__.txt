@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[22077,["/V-SAFE-WORLD-PROJECT/_next/static/chunks/0kddoa~x_jv99.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0nxqe939v1l0~.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0d3shmwh5_nmn.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/01grsd3kfzru3.js"],"default"]
+3:I[97367,["/V-SAFE-WORLD-PROJECT/_next/static/chunks/0kddoa~x_jv99.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0nxqe939v1l0~.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+:HL["/V-SAFE-WORLD-PROJECT/_next/static/chunks/0c56zyv1vdt8m.css","style"]
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"audit":{"id":"2w-4w-hmv-vehicles-audit","title":"2W/4W/HMV Vehicles Audit","category":"transportation-logistics","icon":"car","shortDescription":"Technical and safety inspections for all fleet vehicle types.","fullDescription":"Comprehensive safety audits for Two-Wheelers, Four-Wheelers, and Heavy Motor Vehicles. We inspect vehicle condition, safety equipment, and driver documentation to ensure fleet reliability and road safety.","image":"/images/audits/2W-4W-HMV Vehicles Audit.webp"}}],[["$","link","0",{"rel":"stylesheet","href":"/V-SAFE-WORLD-PROJECT/_next/static/chunks/0c56zyv1vdt8m.css","precedence":"next"}],["$","script","script-0",{"src":"/V-SAFE-WORLD-PROJECT/_next/static/chunks/01grsd3kfzru3.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"gaZZLipGtybwNkdkhos8u"}
+5:null

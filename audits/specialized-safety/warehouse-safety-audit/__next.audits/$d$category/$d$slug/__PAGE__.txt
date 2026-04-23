@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[22077,["/V-SAFE-WORLD-PROJECT/_next/static/chunks/0kddoa~x_jv99.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0nxqe939v1l0~.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0d3shmwh5_nmn.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/01grsd3kfzru3.js"],"default"]
+3:I[97367,["/V-SAFE-WORLD-PROJECT/_next/static/chunks/0kddoa~x_jv99.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0nxqe939v1l0~.js","/V-SAFE-WORLD-PROJECT/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+:HL["/V-SAFE-WORLD-PROJECT/_next/static/chunks/0c56zyv1vdt8m.css","style"]
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"audit":{"id":"warehouse-safety-audit","title":"Warehouse Safety Audit","category":"specialized-safety","icon":"factory","shortDescription":"Optimizing safety in storage, logistics, and material handling environments.","fullDescription":"Focusing on racking stability, material handling equipment (MHE) safety, traffic management, and warehouse ergonomics. We help prevent common warehouse accidents and optimize storage safety protocols.","image":"/images/audits/Warehouse Safety Audit.jpeg"}}],[["$","link","0",{"rel":"stylesheet","href":"/V-SAFE-WORLD-PROJECT/_next/static/chunks/0c56zyv1vdt8m.css","precedence":"next"}],["$","script","script-0",{"src":"/V-SAFE-WORLD-PROJECT/_next/static/chunks/01grsd3kfzru3.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"gaZZLipGtybwNkdkhos8u"}
+5:null
