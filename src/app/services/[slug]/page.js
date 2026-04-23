@@ -26,7 +26,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const service = getService(params.slug);
+  const resolvedParams = await params;
+  const service = getService(resolvedParams.slug);
   if (!service) return { title: 'Service Not Found' };
   return {
     title: `${service.title} | V-Safe World`,
@@ -34,8 +35,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function ServicePage({ params }) {
-  const service = getService(params.slug);
+export default async function ServicePage({ params }) {
+  const resolvedParams = await params;
+  const service = getService(resolvedParams.slug);
 
   if (!service) {
     notFound();

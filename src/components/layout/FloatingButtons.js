@@ -20,13 +20,14 @@ export default function FloatingButtons() {
         href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
         target="_blank"
         rel="noopener noreferrer"
+        className="whatsapp-float"
         aria-label="Chat on WhatsApp"
         style={{
           position: 'fixed',
-          bottom: '24px',
-          right: '24px',
-          width: '56px',
-          height: '56px',
+          bottom: '20px',
+          right: '20px',
+          width: '50px',
+          height: '50px',
           borderRadius: '50%',
           background: '#25D366',
           color: '#fff',
@@ -34,26 +35,27 @@ export default function FloatingButtons() {
           alignItems: 'center',
           justifyContent: 'center',
           boxShadow: '0 4px 15px rgba(37,211,102,0.4)',
-          zIndex: 999,
+          zIndex: 1000,
           transition: 'transform 0.3s ease, box-shadow 0.3s ease',
           cursor: 'pointer',
         }}
         onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(37,211,102,0.5)'; }}
         onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 4px 15px rgba(37,211,102,0.4)'; }}
       >
-        <MessageCircle size={26} />
+        <MessageCircle size={24} />
       </a>
 
       {/* Scroll to Top */}
       <button
         onClick={scrollToTop}
+        className="scroll-to-top"
         aria-label="Scroll to top"
         style={{
           position: 'fixed',
-          bottom: '90px',
-          right: '28px',
-          width: '44px',
-          height: '44px',
+          bottom: '80px',
+          right: '23px',
+          width: '40px',
+          height: '40px',
           borderRadius: '50%',
           background: 'var(--color-primary)',
           color: '#fff',
@@ -61,7 +63,7 @@ export default function FloatingButtons() {
           alignItems: 'center',
           justifyContent: 'center',
           boxShadow: '0 4px 12px rgba(10,104,71,0.3)',
-          zIndex: 999,
+          zIndex: 1000,
           cursor: 'pointer',
           transition: 'all 0.3s ease',
           opacity: showScroll ? 1 : 0,
@@ -70,8 +72,25 @@ export default function FloatingButtons() {
           border: 'none',
         }}
       >
-        <ArrowUp size={20} />
+        <ArrowUp size={18} />
       </button>
+
+      <style jsx global>{`
+        @media (max-width: 768px) {
+          .whatsapp-float {
+            width: 44px !important;
+            height: 44px !important;
+            bottom: 15px !important;
+            right: 15px !important;
+          }
+          .scroll-to-top {
+            width: 36px !important;
+            height: 36px !important;
+            bottom: 70px !important;
+            right: 18px !important;
+          }
+        }
+      `}</style>
     </>
   );
 }

@@ -89,6 +89,12 @@
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
+@media (max-width: 1024px) {
+  .header {
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  }
+}
+
 .headerInner {
   display: flex;
   justify-content: space-between;
@@ -98,6 +104,13 @@
   padding: 0 var(--space-xl);
   height: var(--header-height);
   gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .headerInner {
+    padding: 0 var(--space-md);
+    height: 70px;
+  }
 }
 
 .logo {
@@ -141,6 +154,20 @@
   letter-spacing: 0.1em;
   font-weight: 500;
   white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .logoName {
+    font-size: 1.15rem;
+  }
+  .logoSub {
+    font-size: 0.5rem;
+  }
+  .logoIcon {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
 }
 
 /* Desktop Navigation */

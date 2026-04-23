@@ -21,6 +21,9 @@ if (-Not (Test-Path "out")) {
 # Create .nojekyll to bypass GitHub Jekyll processing
 New-Item -Path "out\.nojekyll" -ItemType File -Force | Out-Null
 
+# Create 404.html from index.html for client-side routing on refreshes
+Copy-Item -Path "out\index.html" -Destination "out\404.html" -Force
+
 # 3. Initialize temporary git repository in 'out'
 Set-Location "out"
 git init

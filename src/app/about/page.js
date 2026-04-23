@@ -2,6 +2,7 @@ import PageHero from '@/components/sections/PageHero';
 import { getAboutData } from '@/lib/data';
 import { Eye, Target, Users, Award, Shield, Building, Image as ImageIcon } from 'lucide-react';
 import styles from '@/styles/inner-pages.module.css';
+import { assetPath } from '@/lib/assetPath';
 
 export const metadata = {
   title: 'About Us',
@@ -23,8 +24,12 @@ export default function AboutPage() {
       <section className={styles.pageContent}>
         <div className={styles.pageInner}>
           <div className={`${styles.splitGrid} reveal`}>
-            <div className={styles.imagePlaceholder}>
-              <ImageIcon size={48} />
+            <div className={styles.introImageWrapper}>
+              <img 
+                src={assetPath('/images/about/intro.webp')} 
+                alt="Who We Are - V-Safe World Team" 
+                className={styles.introImage}
+              />
             </div>
             <div>
               <h2>Who We Are</h2>
@@ -86,7 +91,11 @@ export default function AboutPage() {
           </div>
           <div className={`${styles.directorSection} reveal`}>
             <div className={styles.directorPhoto}>
-              <ImageIcon size={40} />
+              <img 
+                src={assetPath('/images/about/director.webp')} 
+                alt={about?.director?.name} 
+                className={styles.directorImg}
+              />
             </div>
             <div>
               <p className={styles.directorQuote}>&ldquo;{about?.director?.quote}&rdquo;</p>

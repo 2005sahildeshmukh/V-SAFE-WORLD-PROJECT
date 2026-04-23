@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  // Only apply basePath in production for GitHub Pages, 
-  // so development runs normally at http://localhost:3000/
-  basePath: process.env.NODE_ENV === 'production' ? '/V-SAFE-WORLD-PROJECT' : undefined,
+  // Ensure trailing slashes for better compatibility with static hosting (GitHub Pages)
+  trailingSlash: true,
+  // Only apply basePath in production for GitHub Pages
+  basePath: process.env.NODE_ENV === 'production' ? '/V-SAFE-WORLD-PROJECT' : '',
   images: {
     unoptimized: true,
     formats: ['image/webp'],
