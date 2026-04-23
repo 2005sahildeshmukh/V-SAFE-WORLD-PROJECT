@@ -546,10 +546,9 @@
 
 @media (max-width: 768px) {
   .trainingsGrid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    min-height: auto;
-    gap: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
 }
 
@@ -1316,7 +1315,7 @@
   .formRow { grid-template-columns: 1fr; }
   .trustBarInner { gap: var(--space-xl); }
   .statNumber { font-size: 1.8rem; }
-  .trainingsGrid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
+  .trainingsGrid { gap: 24px; }
   .trainingCardLarge { grid-row: span 1; }
   .trainingCardWide { grid-column: span 1; }
   .trainingsHeading { font-size: 2rem; }
