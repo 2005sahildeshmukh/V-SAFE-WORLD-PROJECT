@@ -2,7 +2,7 @@
 
 import PageHero from '@/components/sections/PageHero';
 import Link from 'next/link';
-import { CheckCircle, ArrowRight, BookOpen, ShieldCheck, HeartPulse, Flame, Car, HardHat, Siren } from 'lucide-react';
+import { CheckCircle, ArrowRight, BookOpen, ShieldCheck, HeartPulse, Flame, Car, HardHat, Siren, Image as ImageIcon } from 'lucide-react';
 import styles from './trainingDetail.module.css';
 import { assetPath } from '@/lib/assetPath';
 
@@ -65,6 +65,15 @@ export default function TrainingDetail({ training }) {
                   <ShieldCheck size={20} />
                   <span>Aligned with global safety and compliance training standards</span>
                 </div>
+                <div style={{ marginTop: '2.5rem', padding: '1.5rem', background: 'var(--color-primary-light)', borderRadius: 'var(--radius-lg)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
+                  <div>
+                    <h4 style={{ margin: '0 0 4px 0', fontSize: '1.1rem', color: 'var(--color-primary-dark)' }}>Real-World Training in Action</h4>
+                    <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--color-primary)' }}>See high-quality photos from our actual training sessions.</p>
+                  </div>
+                  <Link href="/gallery" className="btn btn-primary">
+                    <ImageIcon size={18} style={{ marginRight: '8px' }} /> View Image Gallery
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -73,7 +82,7 @@ export default function TrainingDetail({ training }) {
                 <h4>Key Modules Covered</h4>
                 <ul className={styles.featureList}>
                   <li><CheckCircle size={18}/> Theoretical Foundations</li>
-                  <li><CheckCircle size={18}/> Practical/Simulated Exercises</li>
+                  <li><CheckCircle size={18}/> Practical Exercises</li>
                   <li><CheckCircle size={18}/> Hazard Anticipation & Response</li>
                   <li><CheckCircle size={18}/> Post-Incident Reporting</li>
                   <li><CheckCircle size={18}/> Regulatory Compliance Basics</li>

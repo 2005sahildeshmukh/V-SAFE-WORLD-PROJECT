@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
   if (!training) return { title: 'Training Not Found' };
   
   return {
-    title: `${training.title} | EHS Training | V-Safe World`,
+    title: `${training.title} | Health & Safety Training | V-Safe World`,
     description: training.shortDescription
   };
 }

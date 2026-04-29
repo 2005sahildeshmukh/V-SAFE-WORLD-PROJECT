@@ -90,12 +90,14 @@ export default function AboutPage() {
             <h2>Leadership</h2>
           </div>
           <div className={`${styles.directorSection} reveal`}>
-            <div className={styles.directorPhoto}>
-              <img 
-                src={assetPath('/images/about/director.webp')} 
-                alt={about?.director?.name} 
-                className={styles.directorImg}
-              />
+            <div className={styles.directorPhoto} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, var(--color-primary-light), var(--color-gray-100))', borderRadius: '50%', border: '8px solid var(--color-white)', boxShadow: '0 10px 30px rgba(0,0,0,0.08)' }}>
+              <div style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ position: 'absolute', width: '120px', height: '120px', borderRadius: '50%', border: '2px dashed var(--color-primary)', animation: 'spin 20s linear infinite' }} />
+                <Users size={64} color="var(--color-primary)" strokeWidth={1.5} />
+                <div style={{ position: 'absolute', bottom: '20px', right: '20px', background: 'var(--color-accent)', borderRadius: '50%', padding: '8px', display: 'flex', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }}>
+                  <Shield size={24} color="var(--color-white)" />
+                </div>
+              </div>
             </div>
             <div>
               <p className={styles.directorQuote}>&ldquo;{about?.director?.quote}&rdquo;</p>

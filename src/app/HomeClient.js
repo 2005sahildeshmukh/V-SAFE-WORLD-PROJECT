@@ -9,13 +9,11 @@ import auditsImg from '@/assets/images/audits and inspection.webp';
 import defensiveDrivingImg from '@/assets/images/defensive-driving.webp';
 import industrialSafetyImg from '@/assets/images/industrial safety.webp';
 import fireSafetyImg from '@/assets/images/fire safety.webp';
-import contentDevelopmentImg from '@/assets/images/content-development.webp';
+import ppeImg from '@/assets/images/ppe.jpg';
 import adaniLogo from '@/assets/images/Adani.webp';
 import adityaBirlaLogo from '@/assets/images/Aditya birla logo.webp';
 import cocaColaLogo from '@/assets/images/Coca-Cola_logo.svg.webp';
 import ltLogo from '@/assets/images/L&T.webp';
-import ppeImg from '@/assets/images/ppe.jpg';
-
 
 export default function HomeClient({ testimonials }) {
   return (
@@ -29,30 +27,8 @@ export default function HomeClient({ testimonials }) {
 
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
-            &ldquo;One-stop shop for all health and safety training needs&rdquo;
+            &ldquo;Your Trusted Partner in Health & Safety Excellence&rdquo;
           </h1>
-          <div className={styles.heroActions}>
-            <Link href="/contact" className="btn btn-accent btn-lg">National Safety Week 2024 — Book Now!</Link>
-          </div>
-        </div>
-
-
-
-        <div className={styles.heroBadges}>
-          <div className={styles.heroBadgesInner}>
-            <div className={styles.badge}>
-              <div className={styles.badgeIcon}><Award size={18} /></div>
-              <span className={styles.badgeText}>DISH Approved</span>
-            </div>
-            <div className={styles.badge}>
-              <div className={styles.badgeIcon}><Shield size={18} /></div>
-              <span className={styles.badgeText}>National Safety<br />Council Member</span>
-            </div>
-            <div className={styles.badge}>
-              <div className={styles.badgeIcon}><Users size={18} /></div>
-              <span className={styles.badgeText}>50+ Trusted Clients</span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -74,7 +50,7 @@ export default function HomeClient({ testimonials }) {
               V-Safe World is committed to delivering high-quality Health &amp; Safety Training, Audits, Consultancy and PPE Solutions to ensure safe, compliant and sustainable workplaces.
             </p>
             <p style={{ marginTop: '1rem' }}>
-              We work to protect people, property and the environment by proactively preventing risks, incidents and injuries. Through our expertise, dedication and continuous improvement, we build a strong culture of safety excellence across all operations.
+              Our mission is to protect lives and the workplace by proactively preventing harm. We combine deep expertise with a culture of continuous improvement to ensure safety excellence across every project we touch.
             </p>
             <div className={styles.aboutFeatures}>
               <div className={styles.aboutFeature}><CheckCircle size={18} /> Certified Trainers</div>
@@ -105,27 +81,26 @@ export default function HomeClient({ testimonials }) {
         </div>
 
         <div className={styles.trainingsGrid}>
-          <Link href="/services/health-wellness" className={`${styles.trainingCard} ${styles.trainingCardLarge}`} style={{ backgroundImage: `url("${healthWellnessImg.src}")` }}>
+          <Link href="/trainings/health-wellness/first-aid-cpr-aed" className={`${styles.trainingCard} ${styles.trainingCardLarge}`} style={{ backgroundImage: `url("${healthWellnessImg.src}")` }}>
             <div className={styles.trainingOverlay}>
               <span className={styles.trainingNum}>01</span>
               <div className={styles.trainingInfo}>
-                <h3>Health &amp; Wellness</h3>
-                <p>Comprehensive CPR, First Aid, POSH awareness, and mental health programs to foster a safe and healthy workplace environment.</p>
+                <h3>First Aid Training</h3>
+                <p>Comprehensive CPR and First Aid programs to foster a safe and healthy workplace.</p>
                 <ul className={styles.cardFeatures}>
-                  <li>Basic Life Support (BLS)</li>
-                  <li>Workplace First Aid</li>
-                  <li>Stress Management</li>
+                  <li>CPR & AED Certification</li>
+                  <li>Emergency Response</li>
                 </ul>
                 <span className={styles.trainingReadMore}>Explore Programs <ArrowRight size={14} /></span>
               </div>
             </div>
           </Link>
-          <Link href="/services/fire-safety" className={styles.trainingCard} style={{ backgroundImage: `url("${fireSafetyImg.src}")` }}>
+          <Link href="/trainings/fire-safety/fire-fighting-training" className={styles.trainingCard} style={{ backgroundImage: `url("${fireSafetyImg.src}")` }}>
             <div className={styles.trainingOverlay}>
               <span className={styles.trainingNum}>02</span>
               <div className={styles.trainingInfo}>
-                <h3>Fire Safety</h3>
-                <p>Expert-led training on fire prevention, extinguisher usage, and evacuation drills for maximum preparedness.</p>
+                <h3>Fire Safety Training</h3>
+                <p>Expert-led training on fire prevention, extinguisher usage, and evacuation drills.</p>
                 <ul className={styles.cardFeatures}>
                   <li>Fire Warden Training</li>
                   <li>Mock Evacuation Drills</li>
@@ -134,26 +109,12 @@ export default function HomeClient({ testimonials }) {
               </div>
             </div>
           </Link>
-          <Link href="/services/road-safety" className={styles.trainingCard} style={{ backgroundImage: `url("${defensiveDrivingImg.src}")` }}>
+          <Link href="/services/industrial-safety" className={styles.trainingCard} style={{ backgroundImage: `url("${industrialSafetyImg.src}")` }}>
             <div className={styles.trainingOverlay}>
               <span className={styles.trainingNum}>03</span>
               <div className={styles.trainingInfo}>
-                <h3>Defensive Driving</h3>
-                <p>Advanced road safety workshops and vehicle handling techniques to reduce accident risks and improve driver behavior.</p>
-                <ul className={styles.cardFeatures}>
-                  <li>Hazard Anticipation</li>
-                  <li>Technical Handling</li>
-                </ul>
-                <span className={styles.trainingReadMore}>Explore <ArrowRight size={14} /></span>
-              </div>
-            </div>
-          </Link>
-          <Link href="/services/industrial-safety" className={styles.trainingCard} style={{ backgroundImage: `url("${industrialSafetyImg.src}")` }}>
-            <div className={styles.trainingOverlay}>
-              <span className={styles.trainingNum}>04</span>
-              <div className={styles.trainingInfo}>
                 <h3>Industrial Safety</h3>
-                <p>Specialized training for high-risk environments, including Work at Height, LOTO, and confined space protocols.</p>
+                <p>Specialized training for high-risk workplaces, including Work at Height and LOTO protocols.</p>
                 <ul className={styles.cardFeatures}>
                   <li>LOTO Procedures</li>
                   <li>Confined Space Entry</li>
@@ -164,128 +125,35 @@ export default function HomeClient({ testimonials }) {
           </Link>
           <Link href="/services/audits-inspections" className={styles.trainingCard} style={{ backgroundImage: `url("${auditsImg.src}")` }}>
             <div className={styles.trainingOverlay}>
-              <span className={styles.trainingNum}>05</span>
+              <span className={styles.trainingNum}>04</span>
               <div className={styles.trainingInfo}>
-                <h3>Audits &amp; Inspection</h3>
-                <p>Systematic safety evaluations and compliance audits with detailed professional reports and recommendations.</p>
+                <h3>Audits &amp; Inspections</h3>
+                <p>Systematic safety evaluations and compliance audits with detailed professional reports.</p>
                 <ul className={styles.cardFeatures}>
-                  <li>EHS Compliance</li>
+                  <li>Health & Safety Compliance</li>
                   <li>Electrical Safety Audits</li>
                 </ul>
                 <span className={styles.trainingReadMore}>Explore <ArrowRight size={14} /></span>
               </div>
             </div>
           </Link>
-          <Link href="/services/safety-equipment" className={`${styles.trainingCard} ${styles.trainingCardWide}`} style={{ backgroundImage: `url("${ppeImg.src}")` }}>
+          <Link href="/trainings/accident-investigation/road-accident-investigation" className={styles.trainingCard} style={{ backgroundImage: `url("/images/trainings/accident-investigation-road-accident-investigation.webp")` }}>
             <div className={styles.trainingOverlay}>
-              <span className={styles.trainingNum}>06</span>
+              <span className={styles.trainingNum}>05</span>
               <div className={styles.trainingInfo}>
-                <h3>Safety Equipment (PPE)</h3>
-                <p>Professional guidance and supply of premium personal protective equipment tailored to specific industrial hazards.</p>
+                <h3>Accident Investigation</h3>
+                <p>Root cause analysis and professional reporting for workplace and transport accidents.</p>
                 <ul className={styles.cardFeatures}>
-                  <li>Head & Eye Protection</li>
-                  <li>Respiratory Gear</li>
+                  <li>Root Cause Analysis</li>
+                  <li>Incident Reporting</li>
                 </ul>
-                <span className={styles.trainingReadMore}>View Catalog <ArrowRight size={14} /></span>
+                <span className={styles.trainingReadMore}>Explore <ArrowRight size={14} /></span>
               </div>
             </div>
           </Link>
         </div>
       </section>
 
-
-      {/* Train the Trainer Section */}
-      <section className={styles.trainTheTrainer}>
-        <div className={styles.tttBg} style={{ backgroundImage: `url("/train-the-trainer-bg.png")` }} />
-        <div className={styles.tttOverlay} />
-        <div className={styles.tttInner}>
-          <div className={styles.tttContent}>
-            <span className={styles.tttSubLabel}>We Bring to You</span>
-            <h2 className={styles.tttTitle}>&ldquo;TRAIN THE TRAINER&rdquo;</h2>
-            <h3 className={styles.tttHeading}>Get Your Experts Future Ready</h3>
-            <p className={styles.tttDesc}>Empower your safety leaders with advanced certification programs designed to multiply your organization&apos;s safety capabilities.</p>
-          </div>
-
-          <div className={styles.tttStats}>
-            <div className={styles.tttStat}>
-              <span className={styles.tttStatNum}>500+</span>
-              <span className={styles.tttStatLabel}>Trainers Certified</span>
-            </div>
-            <div className={styles.tttStatDivider} />
-            <div className={styles.tttStat}>
-              <span className={styles.tttStatNum}>50+</span>
-              <span className={styles.tttStatLabel}>Corporate Clients</span>
-            </div>
-            <div className={styles.tttStatDivider} />
-            <div className={styles.tttStat}>
-              <span className={styles.tttStatNum}>20+</span>
-              <span className={styles.tttStatLabel}>Years Experience</span>
-            </div>
-          </div>
-
-          <div className={styles.tttCards}>
-            <div className={styles.tttCard}>
-              <div className={styles.tttCardNum}>01</div>
-              <div className={styles.tttCardIcon}><GraduationCap size={24} /></div>
-              <h4>Professional Trainings</h4>
-              <p>2-3 days of intensive classroom trainings and practical assessments by certified expert trainers.</p>
-              <Link href="/contact" className={styles.tttCardLink}>Learn More <ArrowRight size={14} /></Link>
-            </div>
-            <div className={styles.tttCard}>
-              <div className={styles.tttCardNum}>02</div>
-              <div className={styles.tttCardIcon}><Users size={24} /></div>
-              <h4>Who is it for</h4>
-              <p>Managers, Trainers, and safety professionals looking to sharpen their expertise and lead the way.</p>
-              <Link href="/contact" className={styles.tttCardLink}>Learn More <ArrowRight size={14} /></Link>
-            </div>
-            <div className={styles.tttCard}>
-              <div className={styles.tttCardNum}>03</div>
-              <div className={styles.tttCardIcon}><Award size={24} /></div>
-              <h4>Personal Toolkit</h4>
-              <p>Personal assessment sheets, comprehensive Trainers kit, certification, and much more included.</p>
-              <Link href="/contact" className={styles.tttCardLink}>Learn More <ArrowRight size={14} /></Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Client Logos */}
-      <section className={styles.clientLogos}>
-        <div className={styles.clientLogosTitle}>
-          <h2>Our Prestigious Clients</h2>
-        </div>
-        <div className={styles.logosTrack}>
-          {[
-            { name: 'Adani', logo: adaniLogo.src },
-            { name: 'Aditya Birla', logo: adityaBirlaLogo.src },
-            { name: 'Coca-Cola', logo: cocaColaLogo.src },
-            { name: 'Larsen & Toubro', logo: ltLogo.src },
-            { name: 'Adani', logo: adaniLogo.src },
-            { name: 'Aditya Birla', logo: adityaBirlaLogo.src },
-            { name: 'Coca-Cola', logo: cocaColaLogo.src },
-            { name: 'Larsen & Toubro', logo: ltLogo.src },
-            { name: 'Adani', logo: adaniLogo.src },
-            { name: 'Aditya Birla', logo: adityaBirlaLogo.src },
-            { name: 'Coca-Cola', logo: cocaColaLogo.src },
-            { name: 'Larsen & Toubro', logo: ltLogo.src },
-            { name: 'Adani', logo: adaniLogo.src },
-            { name: 'Aditya Birla', logo: adityaBirlaLogo.src },
-            { name: 'Coca-Cola', logo: cocaColaLogo.src },
-            { name: 'Larsen & Toubro', logo: ltLogo.src },
-          ].map((client, i) => (
-            <div key={i} className={styles.logoItem}>
-              <img
-                src={client.logo}
-                alt={client.name}
-                style={{ maxWidth: '100px', maxHeight: '45px', objectFit: 'contain', transition: 'transform 0.3s ease' }}
-                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                onError={(e) => { e.currentTarget.style.display = 'none'; }}
-              />
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* Testimonials */}
       <section className={`${styles.testimonials} reveal`}>
@@ -320,7 +188,15 @@ export default function HomeClient({ testimonials }) {
         <div className={styles.enquiryGrid}>
           <div className={styles.enquiryForm}>
             <h3>Send Us an Enquiry</h3>
-            <form onSubmit={(e) => e.preventDefault()}>
+            <p style={{ marginBottom: '1.5rem', fontSize: '0.9rem' }}>
+              <a href="https://maps.google.com/" target="_blank" rel="noreferrer" style={{ color: 'var(--color-primary)', textDecoration: 'underline', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                📍 View our physical office on Google Maps
+              </a>
+            </p>
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              alert('Form integration ready! Please link your Google Form/App Script URL in the source code.');
+            }}>
               <div className={styles.formRow}>
                 <div className="form-group">
                   <label className="form-label">Full Name</label>

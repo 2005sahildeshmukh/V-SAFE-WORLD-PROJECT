@@ -2,8 +2,8 @@ import EquipmentClient from './EquipmentClient';
 import { getEquipment } from '@/lib/data';
 
 export const metadata = {
-  title: 'Safety Equipment & PPE',
-  description: 'Premium safety equipment catalog including PPE, gloves, safety shoes, fire extinguishers, and more.',
+  title: 'Safety Equipment (PPE)',
+  description: 'Premium safety equipment visual catalog including head protection, gloves, safety shoes, and more.',
 };
 
 export default function EquipmentPage() {

@@ -13,6 +13,7 @@ const categories = [
   { id: 'road-safety', label: 'Road Safety' },
   { id: 'industrial-safety', label: 'Industrial Safety' },
   { id: 'disaster-management', label: 'Disaster Management' },
+  { id: 'accident-investigation', label: 'Accident Investigation' },
 ];
 
 const iconMap = {
@@ -29,6 +30,7 @@ const categoryLabels = {
   'road-safety': 'Road Safety',
   'industrial-safety': 'Industrial Safety',
   'disaster-management': 'Disaster Management',
+  'accident-investigation': 'Accident Investigation',
 };
 
 function TrainingsContent({ trainings }) {

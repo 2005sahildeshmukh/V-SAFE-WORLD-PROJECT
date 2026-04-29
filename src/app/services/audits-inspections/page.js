@@ -3,7 +3,7 @@ import ServiceDetail from '../ServiceDetail';
 
 export const metadata = {
   title: 'Safety Audits & Inspections | V-Safe World',
-  description: 'Systematic procedures for gathering independent information to ensure a zero-harm working environment.'
+  description: 'Systematic procedures for gathering independent information to ensure a zero-harm working workplace.'
 };
 
 export default function Page() {

@@ -11,11 +11,10 @@ const trainingCategories = [
     title: 'Health & Wellness',
     slug: 'health-wellness',
     items: [
-      'First Aid, CPR & AED Training',
+      'First Aid, CPR & AED',
       'POSH Awareness',
       'Women Health & Safety',
       'Diet & Nutrition',
-      'Home Life Safety',
       'Work Life Balance',
       'Mental Health & Stress Management',
       'Ergonomics & Postures'
@@ -25,32 +24,27 @@ const trainingCategories = [
     title: 'Fire Safety Training',
     slug: 'fire-safety',
     items: [
-      'Fire Extinguisher Training',
       'Fire Fighting Training',
       'Evacuation Drills',
-      'Emergency Response Team Training',
+      'Fire Mock Drill',
+      'Emergency Response Team',
       'Fire Marshal Training'
     ]
   },
   {
-    title: 'Road Safety - Defensive Driving',
+    title: 'Road Safety',
     slug: 'road-safety',
     items: [
-      'Two Wheeler Riders',
-      'Light Motor Vehicle',
-      'Heavy Motor Vehicle',
-      'Ambulance & School Bus',
-      'Forklift/MHE/Crane/Hydra',
-      'Loaders & Tankers',
-      'Hazards Vehicles Drivers',
-      'Simulator Training (2W/4W/HMV)',
-      'Mines Road Safety',
-      'Fleet Audit Management',
-      'Fuel Saving & Efficiency',
+      'Road Safety Awareness',
+      'Defensive Driving Training (2W/4W/HMV)',
+      'Emergency Vehicle Training',
+      'Hazardous Material Vehicles Training',
+      'MHE Training (Forklift / BOPT / Reach Truck / EOT / Crane / Hydra)',
+      'Simulator & VR Training',
       'Journey Risk Management',
-      'Vehicle Inspection',
-      'Drunk Busters Activity',
-      'Road Show Program'
+      'Road Show Program',
+      'Road Accident Mock Drill',
+      'Engagement Activity (Drunk Busters / Plant Safety Mela)'
     ]
   },
   {
@@ -66,7 +60,7 @@ const trainingCategories = [
       'Chemical Safety',
       'Workplace Safety',
       'Permit To Work',
-      'HIRA',
+      'Risk Assessment - HIRA & EA&I',
       'Occupational Safety',
       'Scaffolding Safety',
       'Construction Safety'
@@ -76,14 +70,19 @@ const trainingCategories = [
     title: 'Disaster Management',
     slug: 'disaster-management',
     items: [
-      'Evacuation Drill',
-      'Disaster Preparedness Training',
+      'Evacuation Drills',
+      'Disaster Preparedness',
       'Search & Rescue',
-      'Hurricane Safety',
-      'Flood Safety',
-      'Event Safety',
-      'Home Safety',
+      'Mock Drill (Earthquake / Flood / Hurricane)',
       'Rescue From Highrise Building'
+    ]
+  },
+  {
+    title: 'Accident Investigation',
+    slug: 'accident-investigation',
+    items: [
+      'Road Accident Investigation',
+      'Workplace Accident Investigation (Industries / Warehouse / Construction)'
     ]
   }
 ];
@@ -92,17 +91,17 @@ const auditCategories = [
   {
     title: 'Compliance & Management',
     slug: 'compliance-management',
-    items: ['EHS Audits', 'ISO 45001', 'Workplace Safety Audit', 'School Audits']
+    items: ['ISO 9001 - Quality Management', 'ISO 14001 - Environmental Management', 'ISO 45001 - Occupational Health & Safety', 'Health & Safety Audits', 'Workplace Safety Audit', 'School Audits']
   },
   {
     title: 'Specialized Safety',
     slug: 'specialized-safety',
-    items: ['Fire Safety Audit', 'Electrical Safety Audit', 'Warehouse Safety Audit', 'Event Safety Audit', 'Emergency Preparedness Audit']
+    items: ['Fire Safety Audit', 'Electrical Safety Audit', 'Warehouse Safety Audit', 'Emergency Preparedness Audit']
   },
   {
     title: 'Transportation & Logistics',
     slug: 'transportation-logistics',
-    items: ['2W/4W/HMV Vehicles Audit', 'Road Safety Audit', 'Journey Risk Management', 'Forklift/Crane Inspection']
+    items: ['2W/4W/HMV Vehicles Audit', 'Journey Risk Management', 'Forklift/Crane Inspection']
   },
   {
     title: 'Site & Field Inspections',
@@ -179,9 +178,13 @@ export default function Header({ settings }) {
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
         <div className={styles.headerInner}>
           <Link href="/" className={styles.logo}>
+            <div className={styles.logoIcon}>
+              <Shield size={28} strokeWidth={2.5} color="var(--color-white)" />
+            </div>
             <div className={styles.logoText}>
               <span className={styles.logoName}>V-Safe World</span>
               <span className={styles.logoSub}>Pvt Ltd</span>
+              <span className={styles.logoTagline}>Your Safety Partner</span>
             </div>
           </Link>
 

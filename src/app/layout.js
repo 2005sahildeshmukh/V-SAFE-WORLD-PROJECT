@@ -19,13 +19,13 @@ const outfit = Outfit({
 
 export const metadata = {
   title: {
-    default: "V-Safe World – One-Stop Shop for EHS Training & Safety Solutions",
+    default: "V-Safe World – One-Stop Shop for Health & Safety Training & Safety Solutions",
     template: "%s | V-Safe World",
   },
   description:
-    "V-Safe World Pvt Ltd provides comprehensive EHS training, safety audits, fire safety, industrial safety training, PPE equipment, and consultancy services across the globe.",
+    "V-Safe World Pvt Ltd provides comprehensive Health & Safety training, safety audits, fire safety, industrial safety training, PPE equipment, and consultancy services across the globe.",
   keywords: [
-    "EHS training",
+    "Health & Safety training",
     "safety audits",
     "fire safety training",
     "industrial safety",
@@ -39,9 +39,9 @@ export const metadata = {
     type: "website",
     locale: "en_IN",
     siteName: "V-Safe World",
-    title: "V-Safe World – One-Stop Shop for EHS Training & Safety Solutions",
+    title: "V-Safe World – One-Stop Shop for Health & Safety Training & Safety Solutions",
     description:
-      "Comprehensive EHS training, safety audits, fire safety, industrial safety, PPE equipment, and consultancy services.",
+      "Comprehensive Health & Safety training, safety audits, fire safety, industrial safety, PPE equipment, and consultancy services.",
   },
 };
 

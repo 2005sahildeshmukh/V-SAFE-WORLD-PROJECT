@@ -37,9 +37,9 @@ function EquipmentContent({ equipment }) {
   return (
     <>
       <PageHero
-        title="Safety Equipment & PPE"
-        description="Dedicated gallery / catalog for safety gear and equipment"
-        breadcrumbs={[{ label: 'Safety Equipment' }]}
+        title="Safety Equipment (PPE)"
+        description="Visual product catalog of high-quality Personal Protective Equipment"
+        breadcrumbs={[{ label: 'PPE' }]}
       />
 
       <section className={styles.pageContent}>
@@ -69,9 +69,9 @@ function EquipmentContent({ equipment }) {
           </div>
 
           <div className={styles.greenCta}>
-            <h3>Need Bulk Orders?</h3>
-            <p>Contact us for competitive pricing on bulk safety equipment orders.</p>
-            <Link href="/contact" className="btn btn-accent btn-lg">Get a Quote <ArrowRight size={16} /></Link>
+            <h3>Equip Your Workforce</h3>
+            <p>Contact us to source premium, industry-certified safety equipment for your entire team.</p>
+            <Link href="/contact" className="btn btn-accent btn-lg">Request a Quote <ArrowRight size={16} /></Link>
           </div>
         </div>
       </section>

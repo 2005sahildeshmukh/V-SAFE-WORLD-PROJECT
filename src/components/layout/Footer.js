@@ -41,7 +41,7 @@ export default function Footer() {
         <div className={styles.footerColumn}>
           <h4>Our Services</h4>
           <div className={styles.footerLinks}>
-            <Link href="/trainings"><ChevronRight size={14} /> EHS Training</Link>
+            <Link href="/trainings"><ChevronRight size={14} /> Health & Safety Training</Link>
             <Link href="/trainings"><ChevronRight size={14} /> Fire Safety Training</Link>
             <Link href="/trainings"><ChevronRight size={14} /> Industrial Safety</Link>
             <Link href="/audits"><ChevronRight size={14} /> Audits and Inspections</Link>

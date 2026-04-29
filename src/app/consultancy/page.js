@@ -24,7 +24,7 @@ export default function ConsultancyPage() {
               <h3><Shield size={22} color="var(--color-primary)" /> Safety Consultancy</h3>
               <p>Our specialized safety consultancy services help organizations build robust safety management systems, achieve compliance, and create a culture of safety excellence.</p>
               <ul>
-                <li><CheckCircle size={16} color="var(--color-primary)" /> EHS Management System Development</li>
+                <li><CheckCircle size={16} color="var(--color-primary)" /> Health & Safety Management System Development</li>
                 <li><CheckCircle size={16} color="var(--color-primary)" /> Safety Policy & Procedure Design</li>
                 <li><CheckCircle size={16} color="var(--color-primary)" /> Risk Assessment & Mitigation</li>
                 <li><CheckCircle size={16} color="var(--color-primary)" /> Regulatory Compliance Support</li>
