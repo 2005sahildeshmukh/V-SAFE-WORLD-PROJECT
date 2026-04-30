@@ -9,6 +9,7 @@ import auditsImg from '@/assets/images/audits and inspection.webp';
 import defensiveDrivingImg from '@/assets/images/defensive-driving.webp';
 import industrialSafetyImg from '@/assets/images/industrial safety.webp';
 import fireSafetyImg from '@/assets/images/fire safety.webp';
+import accidentInvestigationImg from '@/assets/images/trainings/Road Accident Investigation.webp';
 import ppeImg from '@/assets/images/ppe.jpg';
 import adaniLogo from '@/assets/images/Adani.webp';
 import adityaBirlaLogo from '@/assets/images/Aditya birla logo.webp';
@@ -137,7 +138,7 @@ export default function HomeClient({ testimonials }) {
               </div>
             </div>
           </Link>
-          <Link href="/trainings/accident-investigation/road-accident-investigation" className={styles.trainingCard} style={{ backgroundImage: `url("/images/trainings/accident-investigation-road-accident-investigation.webp")` }}>
+          <Link href="/trainings/accident-investigation/road-accident-investigation" className={styles.trainingCard} style={{ backgroundImage: `url("${accidentInvestigationImg.src}")` }}>
             <div className={styles.trainingOverlay}>
               <span className={styles.trainingNum}>05</span>
               <div className={styles.trainingInfo}>

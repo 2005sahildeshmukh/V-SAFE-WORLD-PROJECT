@@ -27,13 +27,14 @@ Copy-Item -Path "out\index.html" -Destination "out\404.html" -Force
 # 3. Initialize temporary git repository in 'out'
 Set-Location "out"
 git init
+git checkout -b deploy-branch
 git add .
 git commit -m "Deploy to GitHub Pages $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
 
 # 4. Push to gh-pages branch
 $RemoteUrl = "https://github.com/2005sahildeshmukh/V-SAFE-WORLD-PROJECT.git"
 Write-Host "Pushing to GitHub Pages..." -ForegroundColor Yellow
-git push $RemoteUrl master:gh-pages --force
+git push $RemoteUrl deploy-branch:gh-pages --force
 
 # 5. Cleanup
 Set-Location ".."
