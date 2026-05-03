@@ -86,7 +86,7 @@ export default function HomeClient({ testimonials }) {
             <div className={styles.trainingOverlay}>
               <span className={styles.trainingNum}>01</span>
               <div className={styles.trainingInfo}>
-                <h3>First Aid Training</h3>
+                <h3>Health & Wellness</h3>
                 <p>Comprehensive CPR and First Aid programs to foster a safe and healthy workplace.</p>
                 <ul className={styles.cardFeatures}>
                   <li>CPR & AED Certification</li>
@@ -147,6 +147,34 @@ export default function HomeClient({ testimonials }) {
                 <ul className={styles.cardFeatures}>
                   <li>Root Cause Analysis</li>
                   <li>Incident Reporting</li>
+                </ul>
+                <span className={styles.trainingReadMore}>Explore <ArrowRight size={14} /></span>
+              </div>
+            </div>
+          </Link>
+          <Link href="/trainings/road-safety/road-safety-awareness" className={styles.trainingCard} style={{ backgroundImage: `url("${defensiveDrivingImg.src}")` }}>
+            <div className={styles.trainingOverlay}>
+              <span className={styles.trainingNum}>06</span>
+              <div className={styles.trainingInfo}>
+                <h3>Road Safety</h3>
+                <p>Comprehensive defensive driving and road safety programs to ensure safe transportation.</p>
+                <ul className={styles.cardFeatures}>
+                  <li>Defensive Driving</li>
+                  <li>Vehicle Safety Checks</li>
+                </ul>
+                <span className={styles.trainingReadMore}>Explore <ArrowRight size={14} /></span>
+              </div>
+            </div>
+          </Link>
+          <Link href="/equipment" className={styles.trainingCard} style={{ backgroundImage: `url("${ppeImg.src}")` }}>
+            <div className={styles.trainingOverlay}>
+              <span className={styles.trainingNum}>07</span>
+              <div className={styles.trainingInfo}>
+                <h3>Safety Equipment (PPE)</h3>
+                <p>High-quality Personal Protective Equipment solutions for various industrial applications.</p>
+                <ul className={styles.cardFeatures}>
+                  <li>Industrial PPE</li>
+                  <li>Safety Consultation</li>
                 </ul>
                 <span className={styles.trainingReadMore}>Explore <ArrowRight size={14} /></span>
               </div>
