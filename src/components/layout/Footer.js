@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { assetPath } from '@/lib/assetPath';
 import { Shield, Phone, Mail, MapPin, ChevronRight, Send } from 'lucide-react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa6';
 import styles from './Footer.module.css';
@@ -10,7 +11,14 @@ export default function Footer() {
         {/* Brand Column */}
         <div className={styles.footerBrand}>
           <div className={styles.footerLogo}>
-            <span className={styles.footerLogoText}>V-Safe World</span>
+            <div style={{ background: '#fff', padding: '5px 10px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
+              <img 
+                src={assetPath('/images/logo.png')} 
+                alt="V-Safe World Logo" 
+                style={{ height: '60px', width: 'auto', display: 'block' }} 
+              />
+            </div>
+            <span className={styles.footerLogoText}>V-Safe World Pvt Ltd</span>
           </div>
           <p>
             V-Safe World delivers expert Health &amp; Safety Training, Audits, Consultancy, and PPE solutions to create safe, compliant, and sustainable workplaces.
