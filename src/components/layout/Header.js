@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { assetPath } from '@/lib/assetPath';
 import { Mail, Phone, Globe, Menu, X, Shield, ChevronDown } from 'lucide-react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube, FaXTwitter } from 'react-icons/fa6';
 import styles from './Header.module.css';
@@ -177,13 +178,14 @@ export default function Header({ settings }) {
       {/* Main Header */}
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
         <div className={styles.headerInner}>
-          <Link href="/" className={styles.logo}>
-            <div className={styles.logoIcon}>
-              <Shield size={28} strokeWidth={2.5} color="var(--color-white)" />
-            </div>
+          <Link href="/" className={styles.logo} style={{ display: 'flex', alignItems: 'center' }}>
+            <img 
+              src={assetPath('/images/logo.png')} 
+              alt="V-Safe World Logo" 
+              style={{ height: '80px', width: 'auto', marginRight: '12px' }} 
+            />
             <div className={styles.logoText}>
               <span className={styles.logoName}>V-Safe World</span>
-              <span className={styles.logoSub}>Pvt Ltd</span>
               <span className={styles.logoTagline}>Your Safety Partner</span>
             </div>
           </Link>
